@@ -88,5 +88,136 @@
             <p>Tags para negrito=&lthstrong&gt, para italico=&ltem&gt</p>
 
             <h2>IMAGENS</h2>
+            <p>Tag &ltimg&gt define uma imagem em uma pagina.</p>
+            <p>Deve ter dois atributos preenchidos: src e alt</p>
+            <p>O atributo src é otrigatorio, aponta o local da imagem. O alt é um texto alternativo para caso não carregue a imagem</p>
+            <p>O HTML 5 tem uma nova tag, o figure, onde voce pode colocar o img e alem disso, o figcaption, onde voce pode colocar uma legenda</p>
+            <p>&ltfigure&gt</p>
+                <p>&ltimg src="caminho_da_imagem" alt="texto_alternativo"&gt</p>
+                <p>&ltfigcaption&gtLegenda_para_essa_imagem&lt/figcaption&gt</p>
+            <p>&lt/figure&gt</p>
+
+            <h2>A estrutura dos arquivos de um projeto</h2>
+            <p>Aqui temos recomendações, mas não regras, podendo adaptar para seu projeto</p>
+            <p>Geralmente fica tudo em uma pasta, e para ela tem uma "capa".
+                Essa capa é uma pagina inicial que indica para o visitante quais são as outras paginas que fazem parte desse projeto e como pode acessa-las, como um indice.
+            </p>
+            //icone de pasta e de pagina
+            <p>Pasta_nome_do_projeto</p>
+                <p>index.html</p>
+            <p>Então para o css usamos uma pasta, e para o js tambem, alem de ser conveniente ter uma pasta para imagem</p>
+            <p>Pasta_nome_do_projeto</p>
+                <p>index.html</p>
+                <p>sobre.html</p>
+                <p>css/</p>
+                <p>js/</p>
+                <p>img/</p>
+            <p>Note que se tiver outros html coleque no mesmo nivel hierarquico do index.html</p>
+
+            //EXERCICIOS
+
+            <h2>Estilizando com CSS</h2>
+            <p>Quando colocamos uma tag, e ela aparece no navegador, ela tem um estilo padrão, como tamanho, fonte e cor.
+                Mas podemos customizar esse estilo com css.
+            </p>
+            <p>Antigamente usava-se no propeio html. Ex:&lth1&gt&ltfont color="red"&gtTexto&lt/font&gt&lt/h1&gt</p>
+            <p>Assim ficaria vermelho o texto. Mas não usamos mais tags de estilo. Usamos o CSS.</p>
+            <p>CSS=linguagem separada do html para cuidar da estilização da pagina.</p>
+
+            <h2>Sintaxe e Inclusão do CSS</h2>
+            <p>Propriedade e valores separados por um sinal de dois pontos ":", e cada conjunto de propriedade+valor separam-se de outra propriedade+valor com um ponto e virgula ";"</p>
+            <p>{color: blue;
+                background-color: yellow;}
+            </p>
+            <p>Nesse exemplo as tags que forem encapsulada com esse css vai ficar azul, com fundo amarelo</p>
+            <p>Podemos usar o css no html tambem. Mas voce não acabou de dizer que ele existe justamente para sair do html?
+                Calma, antes do css usavamos tags de estilo, não usamos mais tags de estilo, usamos o css, que tem uma sintese especifica, e que pode ser usada no htl ou em um arquivo separado (melhor pratica)
+            </p>
+            <p>Ex de css dentro do html:&ltp style="color: blue; background-color:yellow;"&gt
+                Conteudo&lt/p&gt
+            </p>
+            <p>Alem disso, outra forma de usar css dentro do html seria, ao inves de tag de estilo (não usadas) e ao inves de integrar a uma tag como vimos ela no &ltp&gt,
+                podemos usar uma tag criada para o css: &ltstyle&gt.
+                Note que não é uma tag de estilo (que não deve ser usada), é uma tag propria para o css, que agrupa o css em sua propria sintexe. 
+            </p>
+            <p>Tanto nessa ultima forma quanto css em outro arquivo usamos o seletor css para indicar qual tag vamos estilizar</p>
+            <p>&ltstyle&gt</p>
+                <p>p{
+                    color: blue;
+                    background-color: yellow;
+                    }</p>
+            <p>&lt/style&gt</p>
+            <p>No exemplo acima significa que todas as tag p (p sendo o seletor css) terá esse estilo.</p>
+            <p>Observação:Essa forma, com a tag style, deve ser colocada no head</p>
+
+            <h3>Arquivo exteno</h3>
+            <p>Para ter o css em um outro arquivo, devemos conectar o css ao html, para isso usamos a extensão .css, ou seja, seu arquivo css deve ser NOME_DO_ARQUIVO.css</p>
+            <p>Colocamos um link no head: &ltlink rel=stylesheet" href="estilo.css"&gt</p>
+            
+            <h2>Propriedades tipograficas e fontes</h2>
+            <h3>Propriedade font-family</h3>
+            <p>Recebe o valor com ou sem aspas, primeiramente veremos com as familias.</p>
+            <p>As fontes tem familias</p>
+            <p>Serif: São chamadas de fontes serifadas, por conta do pequeno ornamento em sua terminação, e costuma ser a padão. As mais usadas é times e times new roman</p>
+            <p>Sans-serif: Podemos usar sem serifas, como por exemplo Arial, Helvetica.</p>
+            <p>Monospace: como por exemplo a fonte Courier.</p>
+            <p>Ex:
+                h1{
+                    font-family: serif;
+                }
+            </p>
+            <p>Podemos usar a fonte especifica alem da familia</p>
+            <p>Ex:
+                h1{
+                    font-family: "times", serif;
+                }
+            </p>
+            <p>Podemos colocar uma segunda opção para o navegador caso ele não tenha dispovinvel a primeira</p>
+            <p>Ex:
+                h1{
+                    font-family: "times", "times new roman", serif;
+                }
+            </p>
+            <p>Se não tiver a primeira, verificará a segunda, se não tiver a segunda, diz para ser qualquer uma serif</p>
+            
+            <h3>Propriedade font-style</h3>
+            <p>Define o estilo da fonte. Normal, italic e oblique</p>
+
+            <h2>Alinhamento e decoração de texto</h2>
+            <h3>Propriedade text-align</h3>
+            <p>Alinhamento do texto.</p>
+            <p>text-align: right = direita</p>
+            <p>text-align: left = esquerda</p>
+            <p>text-align: center = centro</p>
+            <p>text-align: justify = justificado</p>
+            <p>É possivel configurar outros espaçamentos de texto</p>
+            <p>p{
+                line-height: 3px; /* tamanho da altura de cada linha */
+		        letter-spacing: 3px; /* tamanho	do espaço entre	cada letra */
+		        word-spacing: 5px;	/* tamanho do espaço entre cada palavra */
+		        text-indent: 30px;	/* tamanho da margem da	primeira linha do texto	*/
+                }
+            </p>
+
+            <h2>Imagem de Fundo</h2>
+            <p>h1{
+                background-image: url(arquivo.jpg);
+                }</p>
+            <p>Serve para colocar uma imagem no fundo da tag. Precisa esta na mesma pasta css</p>
+
+            <h2>Bordas</h2>
+            <p>body{
+                border-color: red; /*Cor*/
+                border-style: solid; /*Estilo de exibição*/
+                border-width: 1px; /*Largura*/
+                }</p>
+                <p>Pode ser otimizado como:</p>
+                <p>body{
+                    border: 1px solid red;
+                    }</p>
+            //EXERCICIOS
+            
+            <h2>Cores na web</h2>
+            <p>Propriedades como background-color, color, border-color</p>
     </body>
 </html>
