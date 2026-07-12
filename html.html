@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aprendizado WEB</title>
+</head>
+<body>
+    <h1>HTML</h1>
+    <h2>Oque é html?</h2>
+    <p>Esqueleto do navegador, sua estrutura de forma bruta, sem a estetica. 
+    De forma mais formal, é a marcação do conteudo na pagina WEB.  
+    </p>
+    <h2>Tags</h2>
+    <p>Sintexe do html é feita na forma &lt_&gt. Vai nomes especificos dentro daqueles sinais.
+        &ltNOMES_ESPECIFICOS&gt são chamados de tags.
+        Por exemplo: &lth1&gt, é uma tag, e essa é a tag para titulos principais da pagina.  </p>
+        <p>Muitas tags tem conteudo. Por exeplo: &lth1&gtTITULO: HTML &lt/h1&gt. 
+            Note que usamos o contrabarra+NOMEE_DA_TAG para fechar o conteudo. </p>
+        
+            <h2>Atributo</h2>
+            <p>Muitas tags tem atributos. Ele vem na sua definição ficando &ltNOME_DA_TAG ATRIBUTO=VALOR&gt.
+                Por exemplo:</p>
+            <p class="">
+                &ltimg src="endereço_da_imagem"&gt
+            </p>
+            <p class="">
+                &lttag atributo="valor"&gt
+            </p>
+            <p>Veja que não tem conteudo em si, então não precisa de tag de fechamento (/mome_da_tag)</p>
+
+            <h2>Estrutura valida do documento</h2>
+            //deixa em forma de lista
+            <p>Para ser valido o documento precisa de: &lthtml&gt, &lthead&gt, &ltbody&gt</p>
+            <p>Dessa forma, veremos cada uma</p>
+            <h3>&lthtml&gt</h3>
+            <p>Na estrutura do documento inserimos antes de tudo essa tag: &lthtml&gt.
+                Dentro dela temos duas tags. Quando tag esta dentro de outra podemos dizer que elas são filhas (internas) e mãe (externa).As duas filhas pode ser chamadas de irmãs.
+            </p>
+            <p>&lthtml&gt</p>
+                <p>&lthead&gt&lt/head&gt</p>
+                <p>&ltbody&gt&lt/body&gt</p>
+            <p>&lt/html&gt</p>
+
+            <h3>&lthead&gt</h3>
+            <p>Contem informações sobre o documento que interessa apenas ao navegador e não ao usuario visitante.</p>
+            <p>Dentro dela precisa obricatoriamente tem um titulo, e usamos a tag: &lttitle&gt</p>
+            <p>Como title esta dentro do head não vai aparecer para o usuario na tela, ela é o titulo do documento, e ficará na barra de titulo no topo do navegador</p>
+            
+            <p>Para a configuração de idiomas como o portugues que usa caracteres com acento, usamos o encoding ou charset. Fica na tag &ltmeta&gt.
+                Atualmente usamos o UTF-8, mas ja usamos o latin1 </p>
+            <p>&lthtml&gt</p>
+                <p>&lthead&gt&lt/head&gt</p>
+                    <p>&ltmetaa charset="utf-8"&gt</p>
+                    <p>&lttitle&gtTITULO_DO_DOCUMENTO&lt/title&gt</p>
+                <p>&ltbody&gt&lt/body&gt</p>
+            <p>&lt/html&gt</p>
+            
+            <h3>&ltbody&gt</h3>
+            <p>Aqui tudo que estiver será exibido para o usuario visitante.</p>
+            <p>Deverá ter um ou mais tags ali dentro.</p>
+            <p>&lthtml&gt</p>
+                <p>&lthead&gt&lt/head&gt</p>
+                    <p>&ltmetaa charset="utf-8"&gt</p>
+                    <p>&lttitle&gtTITULO_DO_DOCUMENTO&lt/title&gt</p>
+                <p>&ltbody&gt</p>
+                    <p>&lth1&gtTitulo_principal_que_aparece_para_o_usuario&lt/h1&gt</p>
+                <p>&lt/body&gt</p>
+            <p>&lt/html&gt</p>
+            
+            <h3>DOCTYPE</h3>
+            <p>Não é tag, é instruções especiais.</p>
+            <p>Fala para o navegador qual versão html deve ser usada.</p>
+            <p>Usamoso &lt!DOCTYPE html&gt. Que indica que deve ser usada a versão mais recente, que atualmente é a versão 5.</p>
+
+            <h2>Estrutura de um documento html</h2>
+            <p>Veremos 3 tags por agora:</p>
+            //Deixar e forma de lista
+            <p>titulos, paragrafo e enfase</p>
+            
+            <h3>Titulos</h3>
+            <p>Usado as tags de heading, marcada por: &lth_numero&gt</p>
+            <p>&lth1&gt até &lth6&gt. Seguindo a ordem de importancia.</p>
+            <p>Respeitar o nivel de importancia faz o tamanho da forma com que ela vai se apresentar no site, alem de que vai determinar a prioridade de algumas ferrmentas, como a busca do google.</p>
+
+            <h3>Paragrafos</h3>
+            <p>Tags de paragrados vem marcada como:&ltp&gtconteudo&lt/p&gt</p>
+
+            <h3>Enfase</h3>
+            <p>Tags para negrito=&lthstrong&gt, para italico=&ltem&gt</p>
+
+            <h2>IMAGENS</h2>
+    </body>
+</html>
