@@ -321,7 +321,38 @@
             <p>Colocaremos um id na tag html, e para pegar no css usamos esse id, que dever ter um # antes</p>
 
             <h3>Seletor hierarquico</h3>
-            <p>Podemos ainda utilizar um seletor hierarquico que permite colocar estilos no filho de um elemento mãe</p>
+            <p>Podemos ainda utilizar um seletor hierarquico que permite colocar estilos no filho de um elemento mãe.
+                Para isso voce coloca o id na mãe, e na hora de seleconar no css, usa o id+tag filha
+            </p>
+            <p>&ltimg src="logo-topo.png"&gt</p>
+            <p>&ltdiv id="rodape"&gt</p>
+                <p>&ltp&gtSiga-nos nas redes sociais:&lt/p&gt</p>
+                <p>&ltimg src="facebook-icon.png"&gt</p>
+                <p>&ltimg src="instagram-icon.png&gt</p>
+            <p>&lt/div&gt</p>
+            <p>Se eu quero apenas as imagensdo facebook e instagram e devo colocar assim no css:</p>
+            <p>#rodape img {
+                    margin-right: 30px;
+                    vertical-align: middle;
+                    width: 94px;
+                }
+            </p>
+
+            <h2>FLuxo do documento e float</h2>
+            <p>Perceba que o html por padrão deixa todo o conteudo um em baixo do outro, como caixas empilhadas, para sai desse fluxo de documento, podemos usar o float.</p>
+            <p>.foto-familia {
+                    float: left; /* Faz a imagem flutuar para a esquerda */
+                    margin-right: 20px; /* Cria um espaço entre a imagem e o texto ao lado */
+                    margin-bottom: 10px; /* Cria um espaço para o texto não colar embaixo */
+                    width: 200px; /* Define um tamanho para a imagem */
+                }</p>
+            <p>Como o elemento com float sai do fluxo normal da página, os elementos que vêm muito depois dele (como um rodapé ou outra seção) podem tentar subir e se misturar de forma bagunçada.
+                Para evitar que isso aconteça, nós usamos uma propriedade chamada clear no elemento que deve ficar obrigatoriamente abaixo de tudo, reiniciando o fluxo normal do HTML.</p>
+            <p>.elemento-de-baixo {
+                    clear: both; /* Impede que este elemento suba para o lado de qualquer float */
+                }</p>
             
+            
+
     </body>
 </html>
