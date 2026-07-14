@@ -218,6 +218,110 @@
             //EXERCICIOS
             
             <h2>Cores na web</h2>
-            <p>Propriedades como background-color, color, border-color</p>
+            <p>Podemos definir cor pelo seu nome</p>
+            <p>h1{
+                color: red;
+                }
+            </p>
+            <p>Mas não tem variação só escrevendo o nome, voce que um tom especifico é mais facil usar a composição RGB.
+                16 milhoes de corem combinando 3 cores bases:Vermelho (red), Verde (Green), Azul (Blue).
+                Enão cada uma dessas tres vai de 0 a 255, por exemplo, amarelo forte = (255, 255, 0)
+            </p>
+            <p>A sintexe:</p>
+            <p>h1{
+                color: rgb(255, 255, 0);
+                }
+            </p>
+            <p>No entanto, o mas usado é a notação hexadecimal.
+                Usamos o #, depois temos dois caracter para o Red, dois para o Green e dois para o Blue.
+                Com dois caracter em hexadecimal, podemos escrever facilmente esses 255 valores de cada cor, por exemplo:
+                rgb(242, 237, 237), 242=F2, 237=ED, 237=ED, então fica #F2EDED.
+            </p>
+
+            <h2>Listas Html</h2>
+            <p>Pare exibir uma listagem não ordenada</p>
+            <p>&ltul&gt</p>
+                <p>&ltli&gtPrimeiro item da lista&lt/li&gt</p>
+                <p>&ltli&gtSegundo intem da lista:</p>
+                    <p>&ltul&gt</p>
+                        <p>&ltli&gtPrimeiro item da lista aninhada, ou seja topicos de um topico da lista&lt/li&gt</p>
+                        <p>&ltli&gtSegundo item da lista aninhada&lt/li&gt</p>
+                    <p>&lt/ul&gt</p>
+                <p>&lt/li&gt</p>
+                <p>&ltli&gtTerceiro item da lista&lt/li&gt</p>
+            <p>&lt/ul&gt</p>
+            <p>Para exibir uma listagem ordenada</p>
+            <p>&ltol&gt</p>
+                <p>&ltli&gtPrimeiro item da lista&lt/li&gt</p>
+                <p>&ltli&gtSegundo item da lista&lt/li&gt</p>
+                <p>&ltli&gtTerceiro item da lista&lt/li&gt</p>
+                <p>&ltli&gtQuarto item da lista&lt/li&gt</p>
+            <p>&lt/ol&gt</p>
+            <p>Podemos misturar esses dois tipos tambem</p>
+            <p>Existe tambem o tipo de glosario, que usamos para listar termos e significado, que é chamada de lista de definição</p>
+            <p>&ltd1&gt</p>
+                <p>&ltdt&gtTERMO1&lt/dt&gt</p>
+                <p>&ltdd&gt</p>
+                    <p>Significado do termo1</p>
+                <p>&lt/dd&gt</p>
+                <p>&ltdt&gtTERMO2&lt/dt&gt</p>
+                <p>&ltdd&gt</p>
+                    <p>Significado do termo1</p>
+                <p>&lt/dd&gt</p>
+            <p>&lt/d1&gt</p>
+            
+            <h2>Espaçamento, Margem e Dimensões</h2>
+            <h3>Padding</h3>
+            <p>ESpaçamento:Para definir espaçamento interno em algum elemento, ou seja, o limite de sua borda ao conteudo</p>
+            <p>padding-top</p>
+            <p>padding-right</p>
+            <p>paddong-bottom</p>
+            <p>padding-left</p>
+            <p>Esssas propriedade aplicam uma distancia entre o limite do elemento e seus conteudo acima, direira, abaixo e esquerda.
+                Podemos Podemos definir essas subpropriedades comum unico comando que seja jogado para todos
+            </p>
+            <p>p{
+                    padding:10px;
+                }
+            </p>
+            <p>Se passar dois valores,  o primeiro sera mandado para cima e para baixo, o segundo para esquerda e direita</p>
+            <p>Se passar 3 valores, o primeiro sera mandado para cima, o segundo para direita e esquerda, e o terceiropara baixo</p>
+            <p>Se passar 4 valores, respectivamente: cima, direita, baixo, esquerda</p>
+            <h3>Margin</h3>
+            <p>Margem:Parecido com a anterior, mas vai dar um espaço apos o elemento em si, ou seja, alem dele</p>
+            <p>As subpropriedade são as mesmas e funciona da mesma forma:</p>
+            <p>margin-top</p>
+            <p>margin-right</p>
+            <p>margin-bottom</p>
+            <p>margin-left</p>
+            <p>O margin permite que o navegador defina qual será a dimensão de paddin ou margin conforme o espaço disponivel na tela, usamos o valor "auto"</p>
+            <p>Para isso é só colocar alto no lugar do valor que voce deseja substituir, exemplo:</p>
+            <p>p{
+                    margin: 0 auto;
+                }
+            </p>
+            <p>Então pela regra, temos dois valores, o primeiro seria para cima e baixo, que eu coloquei 0, e o segungo para direita e esquerda, que eu coloquei auto</p>
+
+            <h3>Dimensões</h3>
+            <p>Usamos o height (altura) e width (largura)</p>
+            <p>p{
+                    height: 300px;
+                    width: 300px;
+                }
+            </p>
+            <p>Todos os paragrafos do nosso HTML ocuparão 300 pixels de altura e de largura</p>
+
+            <h2>Elementos estruturais</h2>
+            <p>Quando não achamos a tag certa para um conteudo, podemos usar div ou span, que são como coringas. E veremos que tambem é estilizavel.</p>
+            
+            <h2>CSS:Seletores de ID e filho</h2>
+            <p>Sabemos que é possivel selecionar elementos no css usando o nome da tag, mas e se quisessemos pegar um unico paragrafo?</p>
+
+            <h3>Seletor ID</h3>
+            <p>Colocaremos um id na tag html, e para pegar no css usamos esse id, que dever ter um # antes</p>
+
+            <h3>Seletor hierarquico</h3>
+            <p>Podemos ainda utilizar um seletor hierarquico que permite colocar estilos no filho de um elemento mãe</p>
+            
     </body>
 </html>
