@@ -2,397 +2,424 @@
 <html>
 <head>
     <title>Aprendizado WEB</title>
+    <link rel="stylesheet" href="css.css">
 </head>
 <body>
-    <h1>HTML e CSS</h1>
+    <div class="container">
+        <h1>HTML e CSS</h1>
 
 
 
-    <h2>Oque é html?</h2>
-    <p>Esqueleto do navegador, sua estrutura de forma bruta, sem a estetica. 
-    De forma mais formal, é a marcação do conteudo na pagina WEB.  
-    </p>
+        <h2>Oque é html?</h2>
+        <p>Esqueleto do navegador, sua estrutura de forma bruta, sem a estetica. 
+        De forma mais formal, é a marcação do conteudo na pagina WEB.  
+        </p>
 
 
-    <h2>Tags</h2>
-    <p>Sintexe do html é feita na forma &lt_&gt. Vai nomes especificos dentro daqueles sinais.
-        &ltNOMES_ESPECIFICOS&gt são chamados de tags.
-        Por exemplo: &lth1&gt, é uma tag, e essa é a tag para titulos principais da pagina.  </p>
-    <p>Muitas tags tem conteudo. Por exeplo: &lth1&gtTITULO: HTML &lt/h1&gt. 
-        Note que usamos o contrabarra+NOMEE_DA_TAG para fechar o conteudo. </p>
-     
+        <h2>Tags</h2>
+        <p>Sintexe do html é feita na forma &lt_&gt. Vai nomes especificos dentro daqueles sinais.
+            &ltNOMES_ESPECIFICOS&gt são chamados de tags.
+            Por exemplo: &lth1&gt, é uma tag, e essa é a tag para titulos principais da pagina.  </p>
+        <p>Muitas tags tem conteudo. Por exeplo: &lth1&gtTITULO: HTML &lt/h1&gt. 
+            Note que usamos o contrabarra+NOMEE_DA_TAG para fechar o conteudo. </p>
         
-    <h2>Atributo</h2>
-    <p>Muitas tags tem atributos. Ele vem na sua definição ficando &ltNOME_DA_TAG ATRIBUTO=VALOR&gt.
-        Por exemplo:</p>
-    <p>&ltimg src="endereço_da_imagem"&gt</p>
-    <p>&lttag atributo="valor"&gt</p>
-    <p>Veja que não tem conteudo em si, então não precisa de tag de fechamento (/mome_da_tag)</p>
+            
+        <h2>Atributo</h2>
+        <p>Muitas tags tem atributos. Ele vem na sua definição ficando &ltNOME_DA_TAG ATRIBUTO=VALOR&gt.
+            Por exemplo:</p>
+        <p>&ltimg src="endereço_da_imagem"&gt</p>
+        <p>&lttag atributo="valor"&gt</p>
+        <p>Veja que não tem conteudo em si, então não precisa de tag de fechamento (/mome_da_tag)</p>
 
 
-    <h2>Estrutura valida do documento</h2>
-    //deixa em forma de lista
-    <p>Para ser valido o documento precisa de:</p>
-    <ol>
-        <li>&lthtml&gt</li>
-        <li>&lthead&gt</li>
-        <li>&ltbody&gt</li>
-    </ol>
+        <h2>Estrutura valida do documento</h2>
+        //deixa em forma de lista
+        <p>Para ser valido o documento precisa de:</p>
+        <ol>
+            <li>&lthtml&gt</li>
+            <li>&lthead&gt</li>
+            <li>&ltbody&gt</li>
+        </ol>
 
-    <p>Dessa forma, veremos cada uma</p>
-
-
-    <dl>
-        <dt>&lthtml&gt</dt>
-        <dd>
-            <p>Na estrutura do documento inserimos antes de tudo essa tag: &lthtml&gt.
-            Dentro dela temos duas tags. Quando tag esta dentro de outra podemos dizer que elas são filhas (internas) e mãe (externa).As duas filhas pode ser chamadas de irmãs.</p>
-            <p>&lthtml&gt</p>
-                <p>&lthead&gt&lt/head&gt</p>
-                <p>&ltbody&gt&lt/body&gt</p>
-            <p>&lt/html&gt</p>
-        </dd>
-        <dt>&lthead&gt</dt>
-        <dd>
-            <p>Contem informações sobre o documento que interessa apenas ao navegador e não ao usuario visitante.</p>
-            <p>Dentro dela precisa obricatoriamente tem um titulo, e usamos a tag: &lttitle&gt</p>
-            <p>Como title esta dentro do head não vai aparecer para o usuario na tela, ela é o titulo do documento, e ficará na barra de titulo no topo do navegador</p>
-            <p>Para a configuração de idiomas como o portugues que usa caracteres com acento, usamos o encoding ou charset. Fica na tag &ltmeta&gt.
-                Atualmente usamos o UTF-8, mas ja usamos o latin1 </p>
-            <p>&lthtml&gt</p>
-                <p>&lthead&gt&lt/head&gt</p>
-                    <p>&ltmetaa charset="utf-8"&gt</p>
-                    <p>&lttitle&gtTITULO_DO_DOCUMENTO&lt/title&gt</p>
-                <p>&ltbody&gt&lt/body&gt</p>
-            <p>&lt/html&gt</p>
-        </dd>
-        <dt>&ltbody&gt</dt>
-        <dd>
-            <p>Aqui tudo que estiver será exibido para o usuario visitante.</p>
-            <p>Deverá ter um ou mais tags ali dentro.</p>
-            <p>&lthtml&gt</p>
-                <p>&lthead&gt&lt/head&gt</p>
-                    <p>&ltmetaa charset="utf-8"&gt</p>
-                    <p>&lttitle&gtTITULO_DO_DOCUMENTO&lt/title&gt</p>
-                <p>&ltbody&gt</p>
-                    <p>&lth1&gtTitulo_principal_que_aparece_para_o_usuario&lt/h1&gt</p>
-                <p>&lt/body&gt</p>
-            <p>&lt/html&gt</p>
-        </dd>
-        <dt>DOCTYPE</dt>
-        <dd>
-            <p>Não é tag, é instruções especiais.</p>
-            <p>Fala para o navegador qual versão html deve ser usada.</p>
-            <p>Usamoso &lt!DOCTYPE html&gt. Que indica que deve ser usada a versão mais recente, que atualmente é a versão 5.</p>
-        </dd>
-    </dl>
-
-    
-    <h2>Estrutura de um documento html</h2>
-    <p>Veremos 3 tags por agora:</p>
-    <p>titulos, paragrafo e enfase</p>
-    <ol>
-        <li>Titulos</li>
-        <li>Paragrafos</li>
-        <li>Enfase</li>
-    </ol>
-
-    <dl>
-        <dt>Titulos</dt>
-        <dd>
-            <p>Usado as tags de heading, marcada por: &lth_numero&gt</p>
-            <p>&lth1&gt até &lth6&gt. Seguindo a ordem de importancia.</p>
-            <p>Respeitar o nivel de importancia faz o tamanho da forma com que ela vai se apresentar no site, alem de que vai determinar a prioridade de algumas ferrmentas, como a busca do google.</p>
-        </dd>
-        <dt>Paragrafos</dt>
-        <dd>
-            <p>Tags de paragrados vem marcada como:&ltp&gtconteudo&lt/p&gt</p>
-        </dd>
-        <dt>Enfase</dt>
-        <dd>
-            <p>Tags para negrito=&lthstrong&gt, para italico=&ltem&gt</p>
-        </dd>
-    </dl>
+        <p>Dessa forma, veremos cada uma</p>
 
 
-    <h2>IMAGENS</h2>
-    <p>Tag &ltimg&gt define uma imagem em uma pagina.</p>
-    <p>Deve ter dois atributos preenchidos: src e alt</p>
-    <p>O atributo src é otrigatorio, aponta o local da imagem. O alt é um texto alternativo para caso não carregue a imagem</p>
-    <p>O HTML 5 tem uma nova tag, o figure, onde voce pode colocar o img e alem disso, o figcaption, onde voce pode colocar uma legenda</p>
-    <p>&ltfigure&gt</p>
-        <p>&ltimg src="caminho_da_imagem" alt="texto_alternativo"&gt</p>
-        <p>&ltfigcaption&gtLegenda_para_essa_imagem&lt/figcaption&gt</p>
-    <p>&lt/figure&gt</p>
+        <dl>
+            <dt>&lthtml&gt</dt>
+            <dd>
+                <p>Na estrutura do documento inserimos antes de tudo essa tag: &lthtml&gt.
+                Dentro dela temos duas tags. Quando tag esta dentro de outra podemos dizer que elas são filhas (internas) e mãe (externa).As duas filhas pode ser chamadas de irmãs.</p>
+                <p>&lthtml&gt</p>
+                    <p>&lthead&gt&lt/head&gt</p>
+                    <p>&ltbody&gt&lt/body&gt</p>
+                <p>&lt/html&gt</p>
+            </dd>
+            <dt>&lthead&gt</dt>
+            <dd>
+                <p>Contem informações sobre o documento que interessa apenas ao navegador e não ao usuario visitante.</p>
+                <p>Dentro dela precisa obricatoriamente tem um titulo, e usamos a tag: &lttitle&gt</p>
+                <p>Como title esta dentro do head não vai aparecer para o usuario na tela, ela é o titulo do documento, e ficará na barra de titulo no topo do navegador</p>
+                <p>Para a configuração de idiomas como o portugues que usa caracteres com acento, usamos o encoding ou charset. Fica na tag &ltmeta&gt.
+                    Atualmente usamos o UTF-8, mas ja usamos o latin1 </p>
+                <p>&lthtml&gt</p>
+                    <p>&lthead&gt&lt/head&gt</p>
+                        <p>&ltmetaa charset="utf-8"&gt</p>
+                        <p>&lttitle&gtTITULO_DO_DOCUMENTO&lt/title&gt</p>
+                    <p>&ltbody&gt&lt/body&gt</p>
+                <p>&lt/html&gt</p>
+            </dd>
+            <dt>&ltbody&gt</dt>
+            <dd>
+                <p>Aqui tudo que estiver será exibido para o usuario visitante.</p>
+                <p>Deverá ter um ou mais tags ali dentro.</p>
+                <p>&lthtml&gt</p>
+                    <p>&lthead&gt&lt/head&gt</p>
+                        <p>&ltmetaa charset="utf-8"&gt</p>
+                        <p>&lttitle&gtTITULO_DO_DOCUMENTO&lt/title&gt</p>
+                    <p>&ltbody&gt</p>
+                        <p>&lth1&gtTitulo_principal_que_aparece_para_o_usuario&lt/h1&gt</p>
+                    <p>&lt/body&gt</p>
+                <p>&lt/html&gt</p>
+            </dd>
+            <dt>DOCTYPE</dt>
+            <dd>
+                <p>Não é tag, é instruções especiais.</p>
+                <p>Fala para o navegador qual versão html deve ser usada.</p>
+                <p>Usamoso &lt!DOCTYPE html&gt. Que indica que deve ser usada a versão mais recente, que atualmente é a versão 5.</p>
+            </dd>
+        </dl>
+
+        
+        <h2>Estrutura de um documento html</h2>
+        <p>Veremos 3 tags por agora:</p>
+        <p>titulos, paragrafo e enfase</p>
+        <ol>
+            <li>Titulos</li>
+            <li>Paragrafos</li>
+            <li>Enfase</li>
+        </ol>
+
+        <dl>
+            <dt>Titulos</dt>
+            <dd>
+                <p>Usado as tags de heading, marcada por: &lth_numero&gt</p>
+                <p>&lth1&gt até &lth6&gt. Seguindo a ordem de importancia.</p>
+                <p>Respeitar o nivel de importancia faz o tamanho da forma com que ela vai se apresentar no site, alem de que vai determinar a prioridade de algumas ferrmentas, como a busca do google.</p>
+            </dd>
+            <dt>Paragrafos</dt>
+            <dd>
+                <p>Tags de paragrados vem marcada como:&ltp&gtconteudo&lt/p&gt</p>
+            </dd>
+            <dt>Enfase</dt>
+            <dd>
+                <p>Tags para negrito=&lthstrong&gt, para italico=&ltem&gt</p>
+            </dd>
+        </dl>
 
 
-    <h2>A estrutura dos arquivos de um projeto</h2>
-    <p>Aqui temos recomendações, mas não regras, podendo adaptar para seu projeto</p>
-    <p>Geralmente fica tudo em uma pasta, e para ela tem uma "capa".
-        Essa capa é uma pagina inicial que indica para o visitante quais são as outras paginas que fazem parte desse projeto e como pode acessa-las, como um indice.
-    </p>
-    //icone de pasta e de pagina
-    <p>Pasta_nome_do_projeto</p>
-        <p>index.html</p>
-    <p>Então para o css usamos uma pasta, e para o js tambem, alem de ser conveniente ter uma pasta para imagem</p>
-    <p>Pasta_nome_do_projeto</p>
-        <p>index.html</p>
-        <p>sobre.html</p>
-        <p>css/</p>
-        <p>js/</p>
-        <p>img/</p>
-    <p>Note que se tiver outros html coleque no mesmo nivel hierarquico do index.html</p>
+        <h2>IMAGENS</h2>
+        <p>Tag &ltimg&gt define uma imagem em uma pagina.</p>
+        <p>Deve ter dois atributos preenchidos: src e alt</p>
+        <p>O atributo src é otrigatorio, aponta o local da imagem. O alt é um texto alternativo para caso não carregue a imagem</p>
+        <p>O HTML 5 tem uma nova tag, o figure, onde voce pode colocar o img e alem disso, o figcaption, onde voce pode colocar uma legenda</p>
+        <p>&ltfigure&gt</p>
+            <p>&ltimg src="caminho_da_imagem" alt="texto_alternativo"&gt</p>
+            <p>&ltfigcaption&gtLegenda_para_essa_imagem&lt/figcaption&gt</p>
+        <p>&lt/figure&gt</p>
 
 
-    <h2>Estilizando com CSS</h2>
-    <p>Quando colocamos uma tag, e ela aparece no navegador, ela tem um estilo padrão, como tamanho, fonte e cor.
-        Mas podemos customizar esse estilo com css.
-    </p>
-    <p>Antigamente usava-se no propeio html. Ex:&lth1&gt&ltfont color="red"&gtTexto&lt/font&gt&lt/h1&gt</p>
-    <p>Assim ficaria vermelho o texto. Mas não usamos mais tags de estilo. Usamos o CSS.</p>
-    <p>CSS=linguagem separada do html para cuidar da estilização da pagina.</p>
+        <h2>A estrutura dos arquivos de um projeto</h2>
+        <p>Aqui temos recomendações, mas não regras, podendo adaptar para seu projeto</p>
+        <p>Geralmente fica tudo em uma pasta, e para ela tem uma "capa".
+            Essa capa é uma pagina inicial que indica para o visitante quais são as outras paginas que fazem parte desse projeto e como pode acessa-las, como um indice.
+        </p>
+        //icone de pasta e de pagina
+        <p>Pasta_nome_do_projeto</p>
+            <p>index.html</p>
+        <p>Então para o css usamos uma pasta, e para o js tambem, alem de ser conveniente ter uma pasta para imagem</p>
+        <p>Pasta_nome_do_projeto</p>
+            <p>index.html</p>
+            <p>sobre.html</p>
+            <p>css/</p>
+            <p>js/</p>
+            <p>img/</p>
+        <p>Note que se tiver outros html coleque no mesmo nivel hierarquico do index.html</p>
 
 
-    <h2>Sintaxe e Inclusão do CSS</h2>
-    <p>Propriedade e valores separados por um sinal de dois pontos ":", e cada conjunto de propriedade+valor separam-se de outra propriedade+valor com um ponto e virgula ";"</p>
-    <p>{color: blue;
-        background-color: yellow;}
-    </p>
-    <p>Nesse exemplo as tags que forem encapsulada com esse css vai ficar azul, com fundo amarelo</p>
-    <p>Podemos usar o css no html tambem. Mas voce não acabou de dizer que ele existe justamente para sair do html?
-        Calma, antes do css usavamos tags de estilo, não usamos mais tags de estilo, usamos o css, que tem uma sintese especifica, e que pode ser usada no htl ou em um arquivo separado (melhor pratica)
-    </p>
-    <p>Ex de css dentro do html:&ltp style="color: blue; background-color:yellow;"&gt
-        Conteudo&lt/p&gt
-    </p>
-    <p>Alem disso, outra forma de usar css dentro do html seria, ao inves de tag de estilo (não usadas) e ao inves de integrar a uma tag como vimos ela no &ltp&gt,
-        podemos usar uma tag criada para o css: &ltstyle&gt.
-        Note que não é uma tag de estilo (que não deve ser usada), é uma tag propria para o css, que agrupa o css em sua propria sintexe. 
-    </p>
-    <p>Tanto nessa ultima forma quanto css em outro arquivo usamos o seletor css para indicar qual tag vamos estilizar</p>
-    <p>&ltstyle&gt</p>
+        <h2>Estilizando com CSS</h2>
+        <p>Quando colocamos uma tag, e ela aparece no navegador, ela tem um estilo padrão, como tamanho, fonte e cor.
+            Mas podemos customizar esse estilo com css.
+        </p>
+        <p>Antigamente usava-se no propeio html. Ex:&lth1&gt&ltfont color="red"&gtTexto&lt/font&gt&lt/h1&gt</p>
+        <p>Assim ficaria vermelho o texto. Mas não usamos mais tags de estilo. Usamos o CSS.</p>
+        <p>CSS=linguagem separada do html para cuidar da estilização da pagina.</p>
+
+
+        <h2>Sintaxe e Inclusão do CSS</h2>
+        <p>Propriedade e valores separados por um sinal de dois pontos ":", e cada conjunto de propriedade+valor separam-se de outra propriedade+valor com um ponto e virgula ";"</p>
+        <p>{color: blue;
+            background-color: yellow;}
+        </p>
+        <p>Nesse exemplo as tags que forem encapsulada com esse css vai ficar azul, com fundo amarelo</p>
+        <p>Podemos usar o css no html tambem. Mas voce não acabou de dizer que ele existe justamente para sair do html?
+            Calma, antes do css usavamos tags de estilo, não usamos mais tags de estilo, usamos o css, que tem uma sintese especifica, e que pode ser usada no htl ou em um arquivo separado (melhor pratica)
+        </p>
+        <p>Ex de css dentro do html:&ltp style="color: blue; background-color:yellow;"&gt
+            Conteudo&lt/p&gt
+        </p>
+        <p>Alem disso, outra forma de usar css dentro do html seria, ao inves de tag de estilo (não usadas) e ao inves de integrar a uma tag como vimos ela no &ltp&gt,
+            podemos usar uma tag criada para o css: &ltstyle&gt.
+            Note que não é uma tag de estilo (que não deve ser usada), é uma tag propria para o css, que agrupa o css em sua propria sintexe. 
+        </p>
+        <p>Tanto nessa ultima forma quanto css em outro arquivo usamos o seletor css para indicar qual tag vamos estilizar</p>
+        <p>&ltstyle&gt</p>
+            <p>p{
+                color: blue;
+                background-color: yellow;
+                }</p>
+        <p>&lt/style&gt</p>
+        <p>No exemplo acima significa que todas as tag p (p sendo o seletor css) terá esse estilo.</p>
+        <p>Observação:Essa forma, com a tag style, deve ser colocada no head</p>
+
+        <h3>Arquivo exteno</h3>
+        <p>Para ter o css em um outro arquivo, devemos conectar o css ao html, para isso usamos a extensão .css, ou seja, seu arquivo css deve ser NOME_DO_ARQUIVO.css</p>
+        <p>Colocamos um link no head: &ltlink rel=stylesheet" href="estilo.css"&gt</p>
+
+        
+        <h2>Propriedades tipograficas e fontes</h2>
+
+        <h3>Propriedade font-family</h3>
+        <p>Recebe o valor com ou sem aspas, primeiramente veremos com as familias.</p>
+        <p>As fontes tem familias</p>
+        <p>Serif: São chamadas de fontes serifadas, por conta do pequeno ornamento em sua terminação, e costuma ser a padão. As mais usadas é times e times new roman</p>
+        <p>Sans-serif: Podemos usar sem serifas, como por exemplo Arial, Helvetica.</p>
+        <p>Monospace: como por exemplo a fonte Courier.</p>
+        <p>Ex:
+            h1{
+                font-family: serif;
+            }
+        </p>
+        <p>Podemos usar a fonte especifica alem da familia</p>
+        <p>Ex:
+            h1{
+                font-family: "times", serif;
+            }
+        </p>
+        <p>Podemos colocar uma segunda opção para o navegador caso ele não tenha dispovinvel a primeira</p>
+        <p>Ex:
+            h1{
+                font-family: "times", "times new roman", serif;
+            }
+        </p>
+        <p>Se não tiver a primeira, verificará a segunda, se não tiver a segunda, diz para ser qualquer uma serif</p>
+        
+        <h3>Propriedade font-style</h3>
+        <p>Define o estilo da fonte. Normal, italic e oblique</p>
+
+        <h2>Alinhamento e decoração de texto</h2>
+        <h3>Propriedade text-align</h3>
+        <p>Alinhamento do texto.</p>
+        <p>text-align: right = direita</p>
+        <p>text-align: left = esquerda</p>
+        <p>text-align: center = centro</p>
+        <p>text-align: justify = justificado</p>
+        <p>É possivel configurar outros espaçamentos de texto</p>
         <p>p{
-            color: blue;
-            background-color: yellow;
+            line-height: 3px; /* tamanho da altura de cada linha */
+            letter-spacing: 3px; /* tamanho	do espaço entre	cada letra */
+            word-spacing: 5px;	/* tamanho do espaço entre cada palavra */
+            text-indent: 30px;	/* tamanho da margem da	primeira linha do texto	*/
+            }
+        </p>
+
+
+        <h2>Imagem de Fundo</h2>
+        <p>h1{
+            background-image: url(arquivo.jpg);
             }</p>
-    <p>&lt/style&gt</p>
-    <p>No exemplo acima significa que todas as tag p (p sendo o seletor css) terá esse estilo.</p>
-    <p>Observação:Essa forma, com a tag style, deve ser colocada no head</p>
-
-    <h3>Arquivo exteno</h3>
-    <p>Para ter o css em um outro arquivo, devemos conectar o css ao html, para isso usamos a extensão .css, ou seja, seu arquivo css deve ser NOME_DO_ARQUIVO.css</p>
-    <p>Colocamos um link no head: &ltlink rel=stylesheet" href="estilo.css"&gt</p>
-
-    
-    <h2>Propriedades tipograficas e fontes</h2>
-
-    <h3>Propriedade font-family</h3>
-    <p>Recebe o valor com ou sem aspas, primeiramente veremos com as familias.</p>
-    <p>As fontes tem familias</p>
-    <p>Serif: São chamadas de fontes serifadas, por conta do pequeno ornamento em sua terminação, e costuma ser a padão. As mais usadas é times e times new roman</p>
-    <p>Sans-serif: Podemos usar sem serifas, como por exemplo Arial, Helvetica.</p>
-    <p>Monospace: como por exemplo a fonte Courier.</p>
-    <p>Ex:
-        h1{
-            font-family: serif;
-        }
-    </p>
-    <p>Podemos usar a fonte especifica alem da familia</p>
-    <p>Ex:
-        h1{
-            font-family: "times", serif;
-        }
-    </p>
-    <p>Podemos colocar uma segunda opção para o navegador caso ele não tenha dispovinvel a primeira</p>
-    <p>Ex:
-        h1{
-            font-family: "times", "times new roman", serif;
-        }
-    </p>
-    <p>Se não tiver a primeira, verificará a segunda, se não tiver a segunda, diz para ser qualquer uma serif</p>
-    
-    <h3>Propriedade font-style</h3>
-    <p>Define o estilo da fonte. Normal, italic e oblique</p>
-
-    <h2>Alinhamento e decoração de texto</h2>
-    <h3>Propriedade text-align</h3>
-    <p>Alinhamento do texto.</p>
-    <p>text-align: right = direita</p>
-    <p>text-align: left = esquerda</p>
-    <p>text-align: center = centro</p>
-    <p>text-align: justify = justificado</p>
-    <p>É possivel configurar outros espaçamentos de texto</p>
-    <p>p{
-        line-height: 3px; /* tamanho da altura de cada linha */
-        letter-spacing: 3px; /* tamanho	do espaço entre	cada letra */
-        word-spacing: 5px;	/* tamanho do espaço entre cada palavra */
-        text-indent: 30px;	/* tamanho da margem da	primeira linha do texto	*/
-        }
-    </p>
+        <p>Serve para colocar uma imagem no fundo da tag. Precisa esta na mesma pasta css</p>
 
 
-    <h2>Imagem de Fundo</h2>
-    <p>h1{
-        background-image: url(arquivo.jpg);
-        }</p>
-    <p>Serve para colocar uma imagem no fundo da tag. Precisa esta na mesma pasta css</p>
+        <h2>Bordas</h2>
+        <p>body{
+            border-color: red; /*Cor*/
+            border-style: solid; /*Estilo de exibição*/
+            border-width: 1px; /*Largura*/
+            }</p>
+        <p>Pode ser otimizado como:</p>
+        <p>body{
+                border: 1px solid red;
+            }</p>
+
+        
+        <h2>Cores na web</h2>
+        <p>Podemos definir cor pelo seu nome</p>
+        <p>h1{
+            color: red;
+            }
+        </p>
+        <p>Mas não tem variação só escrevendo o nome, voce que um tom especifico é mais facil usar a composição RGB.
+            16 milhoes de corem combinando 3 cores bases:Vermelho (red), Verde (Green), Azul (Blue).
+            Enão cada uma dessas tres vai de 0 a 255, por exemplo, amarelo forte = (255, 255, 0)
+        </p>
+        <p>A sintexe:</p>
+        <p>h1{
+            color: rgb(255, 255, 0);
+            }
+        </p>
+        <p>No entanto, o mas usado é a notação hexadecimal.
+            Usamos o #, depois temos dois caracter para o Red, dois para o Green e dois para o Blue.
+            Com dois caracter em hexadecimal, podemos escrever facilmente esses 255 valores de cada cor, por exemplo:
+            rgb(242, 237, 237), 242=F2, 237=ED, 237=ED, então fica #F2EDED.
+        </p>
 
 
-    <h2>Bordas</h2>
-    <p>body{
-        border-color: red; /*Cor*/
-        border-style: solid; /*Estilo de exibição*/
-        border-width: 1px; /*Largura*/
-        }</p>
-    <p>Pode ser otimizado como:</p>
-    <p>body{
-            border: 1px solid red;
-        }</p>
+        <h2>Listas Html</h2>
+        <p>Pare exibir uma listagem não ordenada</p>
+        <p>&ltul&gt</p>
+            <p>&ltli&gtPrimeiro item da lista&lt/li&gt</p>
+            <p>&ltli&gtSegundo intem da lista:</p>
+                <p>&ltul&gt</p>
+                    <p>&ltli&gtPrimeiro item da lista aninhada, ou seja topicos de um topico da lista&lt/li&gt</p>
+                    <p>&ltli&gtSegundo item da lista aninhada&lt/li&gt</p>
+                <p>&lt/ul&gt</p>
+            <p>&lt/li&gt</p>
+            <p>&ltli&gtTerceiro item da lista&lt/li&gt</p>
+        <p>&lt/ul&gt</p>
+        <p>Para exibir uma listagem ordenada</p>
+        <p>&ltol&gt</p>
+            <p>&ltli&gtPrimeiro item da lista&lt/li&gt</p>
+            <p>&ltli&gtSegundo item da lista&lt/li&gt</p>
+            <p>&ltli&gtTerceiro item da lista&lt/li&gt</p>
+            <p>&ltli&gtQuarto item da lista&lt/li&gt</p>
+        <p>&lt/ol&gt</p>
+        <p>Podemos misturar esses dois tipos tambem</p>
+        <p>Existe tambem o tipo de glosario, que usamos para listar termos e significado, que é chamada de lista de definição</p>
+        <p>&ltd1&gt</p>
+            <p>&ltdt&gtTERMO1&lt/dt&gt</p>
+            <p>&ltdd&gt</p>
+                <p>Significado do termo1</p>
+            <p>&lt/dd&gt</p>
+            <p>&ltdt&gtTERMO2&lt/dt&gt</p>
+            <p>&ltdd&gt</p>
+                <p>Significado do termo1</p>
+            <p>&lt/dd&gt</p>
+        <p>&lt/d1&gt</p>
+        
 
-    
-    <h2>Cores na web</h2>
-    <p>Podemos definir cor pelo seu nome</p>
-    <p>h1{
-        color: red;
-        }
-    </p>
-    <p>Mas não tem variação só escrevendo o nome, voce que um tom especifico é mais facil usar a composição RGB.
-        16 milhoes de corem combinando 3 cores bases:Vermelho (red), Verde (Green), Azul (Blue).
-        Enão cada uma dessas tres vai de 0 a 255, por exemplo, amarelo forte = (255, 255, 0)
-    </p>
-    <p>A sintexe:</p>
-    <p>h1{
-        color: rgb(255, 255, 0);
-        }
-    </p>
-    <p>No entanto, o mas usado é a notação hexadecimal.
-        Usamos o #, depois temos dois caracter para o Red, dois para o Green e dois para o Blue.
-        Com dois caracter em hexadecimal, podemos escrever facilmente esses 255 valores de cada cor, por exemplo:
-        rgb(242, 237, 237), 242=F2, 237=ED, 237=ED, então fica #F2EDED.
-    </p>
+        <h2>Espaçamento, Margem e Dimensões</h2>
 
+        <h3>Padding</h3>
+        <p>ESpaçamento:Para definir espaçamento interno em algum elemento, ou seja, o limite de sua borda ao conteudo</p>
+        <p>padding-top</p>
+        <p>padding-right</p>
+        <p>paddong-bottom</p>
+        <p>padding-left</p>
+        <p>Esssas propriedade aplicam uma distancia entre o limite do elemento e seus conteudo acima, direira, abaixo e esquerda.
+            Podemos Podemos definir essas subpropriedades comum unico comando que seja jogado para todos
+        </p>
+        <p>p{
+                padding:10px;
+            }
+        </p>
+        <p>Se passar dois valores,  o primeiro sera mandado para cima e para baixo, o segundo para esquerda e direita</p>
+        <p>Se passar 3 valores, o primeiro sera mandado para cima, o segundo para direita e esquerda, e o terceiropara baixo</p>
+        <p>Se passar 4 valores, respectivamente: cima, direita, baixo, esquerda</p>
+        <h3>Margin</h3>
+        <p>Margem:Parecido com a anterior, mas vai dar um espaço apos o elemento em si, ou seja, alem dele</p>
+        <p>As subpropriedade são as mesmas e funciona da mesma forma:</p>
+        <p>margin-top</p>
+        <p>margin-right</p>
+        <p>margin-bottom</p>
+        <p>margin-left</p>
+        <p>O margin permite que o navegador defina qual será a dimensão de paddin ou margin conforme o espaço disponivel na tela, usamos o valor "auto"</p>
+        <p>Para isso é só colocar alto no lugar do valor que voce deseja substituir, exemplo:</p>
+        <p>p{
+                margin: 0 auto;
+            }
+        </p>
+        <p>Então pela regra, temos dois valores, o primeiro seria para cima e baixo, que eu coloquei 0, e o segungo para direita e esquerda, que eu coloquei auto</p>
 
-    <h2>Listas Html</h2>
-    <p>Pare exibir uma listagem não ordenada</p>
-    <p>&ltul&gt</p>
-        <p>&ltli&gtPrimeiro item da lista&lt/li&gt</p>
-        <p>&ltli&gtSegundo intem da lista:</p>
-            <p>&ltul&gt</p>
-                <p>&ltli&gtPrimeiro item da lista aninhada, ou seja topicos de um topico da lista&lt/li&gt</p>
-                <p>&ltli&gtSegundo item da lista aninhada&lt/li&gt</p>
-            <p>&lt/ul&gt</p>
-        <p>&lt/li&gt</p>
-        <p>&ltli&gtTerceiro item da lista&lt/li&gt</p>
-    <p>&lt/ul&gt</p>
-    <p>Para exibir uma listagem ordenada</p>
-    <p>&ltol&gt</p>
-        <p>&ltli&gtPrimeiro item da lista&lt/li&gt</p>
-        <p>&ltli&gtSegundo item da lista&lt/li&gt</p>
-        <p>&ltli&gtTerceiro item da lista&lt/li&gt</p>
-        <p>&ltli&gtQuarto item da lista&lt/li&gt</p>
-    <p>&lt/ol&gt</p>
-    <p>Podemos misturar esses dois tipos tambem</p>
-    <p>Existe tambem o tipo de glosario, que usamos para listar termos e significado, que é chamada de lista de definição</p>
-    <p>&ltd1&gt</p>
-        <p>&ltdt&gtTERMO1&lt/dt&gt</p>
-        <p>&ltdd&gt</p>
-            <p>Significado do termo1</p>
-        <p>&lt/dd&gt</p>
-        <p>&ltdt&gtTERMO2&lt/dt&gt</p>
-        <p>&ltdd&gt</p>
-            <p>Significado do termo1</p>
-        <p>&lt/dd&gt</p>
-    <p>&lt/d1&gt</p>
-    
-
-    <h2>Espaçamento, Margem e Dimensões</h2>
-
-    <h3>Padding</h3>
-    <p>ESpaçamento:Para definir espaçamento interno em algum elemento, ou seja, o limite de sua borda ao conteudo</p>
-    <p>padding-top</p>
-    <p>padding-right</p>
-    <p>paddong-bottom</p>
-    <p>padding-left</p>
-    <p>Esssas propriedade aplicam uma distancia entre o limite do elemento e seus conteudo acima, direira, abaixo e esquerda.
-        Podemos Podemos definir essas subpropriedades comum unico comando que seja jogado para todos
-    </p>
-    <p>p{
-            padding:10px;
-        }
-    </p>
-    <p>Se passar dois valores,  o primeiro sera mandado para cima e para baixo, o segundo para esquerda e direita</p>
-    <p>Se passar 3 valores, o primeiro sera mandado para cima, o segundo para direita e esquerda, e o terceiropara baixo</p>
-    <p>Se passar 4 valores, respectivamente: cima, direita, baixo, esquerda</p>
-    <h3>Margin</h3>
-    <p>Margem:Parecido com a anterior, mas vai dar um espaço apos o elemento em si, ou seja, alem dele</p>
-    <p>As subpropriedade são as mesmas e funciona da mesma forma:</p>
-    <p>margin-top</p>
-    <p>margin-right</p>
-    <p>margin-bottom</p>
-    <p>margin-left</p>
-    <p>O margin permite que o navegador defina qual será a dimensão de paddin ou margin conforme o espaço disponivel na tela, usamos o valor "auto"</p>
-    <p>Para isso é só colocar alto no lugar do valor que voce deseja substituir, exemplo:</p>
-    <p>p{
-            margin: 0 auto;
-        }
-    </p>
-    <p>Então pela regra, temos dois valores, o primeiro seria para cima e baixo, que eu coloquei 0, e o segungo para direita e esquerda, que eu coloquei auto</p>
-
-    <h3>Dimensões</h3>
-    <p>Usamos o height (altura) e width (largura)</p>
-    <p>p{
-            height: 300px;
-            width: 300px;
-        }
-    </p>
-    <p>Todos os paragrafos do nosso HTML ocuparão 300 pixels de altura e de largura</p>
+        <h3>Dimensões</h3>
+        <p>Usamos o height (altura) e width (largura)</p>
+        <p>p{
+                height: 300px;
+                width: 300px;
+            }
+        </p>
+        <p>Todos os paragrafos do nosso HTML ocuparão 300 pixels de altura e de largura</p>
 
 
-    <h2>Elementos estruturais</h2>
-    <p>Quando não achamos a tag certa para um conteudo, podemos usar div ou span, que são como coringas. E veremos que tambem é estilizavel.</p>
-    
-    
-    <h2>CSS:Seletores de ID e filho</h2>
-    <p>Sabemos que é possivel selecionar elementos no css usando o nome da tag, mas e se quisessemos pegar um unico paragrafo?</p>
+        <h2>Elementos estruturais</h2>
+        <p>Quando não achamos a tag certa para um conteudo, podemos usar div ou span, que são como coringas. E veremos que tambem é estilizavel.</p>
+        
+        
+        <h2>CSS:Seletores de ID e filho</h2>
+        <p>Sabemos que é possivel selecionar elementos no css usando o nome da tag, mas e se quisessemos pegar um unico paragrafo?</p>
 
 
-    <h3>Seletor ID</h3>
-    <p>Colocaremos um id na tag html, e para pegar no css usamos esse id, que dever ter um # antes</p>
+        <h3>Seletor ID</h3>
+        <p>Colocaremos um id na tag html, e para pegar no css usamos esse id, que dever ter um # antes</p>
 
-    <h3>Seletor hierarquico</h3>
-    <p>Podemos ainda utilizar um seletor hierarquico que permite colocar estilos no filho de um elemento mãe.
-        Para isso voce coloca o id na mãe, e na hora de seleconar no css, usa o id+tag filha
-    </p>
-    <p>&ltimg src="logo-topo.png"&gt</p>
-    <p>&ltdiv id="rodape"&gt</p>
-        <p>&ltp&gtSiga-nos nas redes sociais:&lt/p&gt</p>
-        <p>&ltimg src="facebook-icon.png"&gt</p>
-        <p>&ltimg src="instagram-icon.png&gt</p>
-    <p>&lt/div&gt</p>
-    <p>Se eu quero apenas as imagensdo facebook e instagram e devo colocar assim no css:</p>
-    <p>#rodape img {
-            margin-right: 30px;
-            vertical-align: middle;
-            width: 94px;
-        }
-    </p>
+        <h3>Seletor hierarquico</h3>
+        <p>Podemos ainda utilizar um seletor hierarquico que permite colocar estilos no filho de um elemento mãe.
+            Para isso voce coloca o id na mãe, e na hora de seleconar no css, usa o id+tag filha
+        </p>
+        <p>&ltimg src="logo-topo.png"&gt</p>
+        <p>&ltdiv id="rodape"&gt</p>
+            <p>&ltp&gtSiga-nos nas redes sociais:&lt/p&gt</p>
+            <p>&ltimg src="facebook-icon.png"&gt</p>
+            <p>&ltimg src="instagram-icon.png&gt</p>
+        <p>&lt/div&gt</p>
+        <p>Se eu quero apenas as imagensdo facebook e instagram e devo colocar assim no css:</p>
+        <p>#rodape img {
+                margin-right: 30px;
+                vertical-align: middle;
+                width: 94px;
+            }
+        </p>
 
 
-    <h2>FLuxo do documento e float</h2>
-    <p>Perceba que o html por padrão deixa todo o conteudo um em baixo do outro, como caixas empilhadas, para sai desse fluxo de documento, podemos usar o float.</p>
-    <p>.foto-familia {
-            float: left; /* Faz a imagem flutuar para a esquerda */
-            margin-right: 20px; /* Cria um espaço entre a imagem e o texto ao lado */
-            margin-bottom: 10px; /* Cria um espaço para o texto não colar embaixo */
-            width: 200px; /* Define um tamanho para a imagem */
-        }</p>
-    <p>Como o elemento com float sai do fluxo normal da página, os elementos que vêm muito depois dele (como um rodapé ou outra seção) podem tentar subir e se misturar de forma bagunçada.
-        Para evitar que isso aconteça, nós usamos uma propriedade chamada clear no elemento que deve ficar obrigatoriamente abaixo de tudo, reiniciando o fluxo normal do HTML.</p>
-    <p>.elemento-de-baixo {
-            clear: both; /* Impede que este elemento suba para o lado de qualquer float */
-        }</p>
-            
-            
+        <h2>FLuxo do documento e float</h2>
+        <p>Perceba que o html por padrão deixa todo o conteudo um em baixo do outro, como caixas empilhadas, para sai desse fluxo de documento, podemos usar o float.</p>
+        <p>.foto-familia {
+                float: left; /* Faz a imagem flutuar para a esquerda */
+                margin-right: 20px; /* Cria um espaço entre a imagem e o texto ao lado */
+                margin-bottom: 10px; /* Cria um espaço para o texto não colar embaixo */
+                width: 200px; /* Define um tamanho para a imagem */
+            }</p>
+        <p>Como o elemento com float sai do fluxo normal da página, os elementos que vêm muito depois dele (como um rodapé ou outra seção) podem tentar subir e se misturar de forma bagunçada.
+            Para evitar que isso aconteça, nós usamos uma propriedade chamada clear no elemento que deve ficar obrigatoriamente abaixo de tudo, reiniciando o fluxo normal do HTML.</p>
+        <p>.elemento-de-baixo {
+                clear: both; /* Impede que este elemento suba para o lado de qualquer float */
+            }</p>
+          
 
-    </body>
+        <h2>Como colocar as faixinhas na direita e esquerda, centralizando o conteudo</h2>
+        <p>Isso não esta no livro, ao menos não nas 50 primeiras paginas.</p>
+        <p>Primeiro colcoamos a pagina inteira em uma div de nome qualquer, por padrão pessoal eu escolho container.</p>
+        <p>Porque não usar o body? Porque ao queresmo mover um bloco inteiro, ele necessariamente precisa ser um bloco, e body não é um bloco, ele é a tela toda, pode até se comportar como bloco, mas pode acabar tem comportamentos inesperados.</p>
+        <p>Então limitamos o tamanho que no container central pode atingir com o width (largura), com um comando especial chamado:</p>
+        <p>max-width: valor;</p>
+        <p>Note que o max é justamente dizer: maximo da largura</p>
+        <p>Coloca uma margin (margem) para centralizar, cima e baixo deixa em 0, pois não terão margem, e auno na esquerda e na direita, para o navegador dar a margem ideal</p>
+        <p>Como o navegador da a margin ideal?</p>
+        <p>"Bom, a tela do usuário tem 1920px de largura. O container só precisa de 960px. Sobraram 960px de espaço vazio. Como a margem das laterais está em 'auto', vou dividir esses 960px que sobraram igualmente: 480px para a esquerda e 480px para a direita."</p>
+        <p>
+            Verá que tem umas bordinhas no topo e no final, alem do texto esta muito colocado no limite, usaremos o padding para driblar os dois problemas
+        </p>
+        <p>padding: 40px 20px; Pois, 40 no topo e no fim, e 20 nas laterais</p>
+        <p>Porque padding e não margin?</p>
+        <p>Pois margin é a margem apos o conteudo, e padding é a margem do conteudo em relação o limite</p>
+
+
+        <h2>Acessibilidade</h2>
+        <p>Para acessibilidade, tem padrão de:</p>
+        <p>
+            line-height: 1.5; /* 1.5 sem aquele px significa, 1.5x do valor atual, por exemeplo: a fonte que voce escolheu tem 16px, então sera 16px*1.5 */
+            letter-spacing: 0.12em; /* tamanho	do espaço entre	cada letra */
+            word-spacing: 0.16em;	/* tamanho do espaço entre cada palavra */</p>
+        <p>Mas é claro que isso vai depender da fonte e bom senso, verifique as diretrizes de acessibilidade.</p>
+
+</body>
 </html>
