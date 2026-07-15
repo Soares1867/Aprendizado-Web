@@ -68,3 +68,18 @@ body{
         opacity: 0; /* Invisível exatamente no meio do caminho */
     }
 }
+
+
+/*Estrutura valida do documento*/
+.tag{
+    color:rgb(241, 35, 197);
+}
+.tag-branco{
+    color:rgb(255, 255, 255);
+}
+.tela-programa{
+    background-color: #1f0b2c;
+    max-width: 600px;
+    padding: 10px 5px;
+    margin:0 auto;
+}

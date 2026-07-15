@@ -19,117 +19,125 @@
 
         
         <h2>Tags</h2>
-        <p>São como etiquetas. HTML define que os conteudos deve teretiquetas que mais convem  para cada conteudo.</p>
+        <p>São como etiquetas. O HTML define que os conteudos se entiquetado com a etiqueta(tag) que  mais convem  para cada conteudo.</p>
         <p>Dessa forma, a sintexe do html é feita na forma <span class="sintexe">&lt<span class="piscar">_</span>&gt</span>.</p>
-        <p>Assim, oque vem dentro do sinal de maior e menor, deve ter um nome especifico que se chama tag, dessa forma:<span class="sintexe">&ltTAG&gt</span></p> 
+        <p>Assim, oque vem dentro do sinal de maior e menor, deve ter um nome especifico que melhor representa o conteudo que voce quer colocar, dessa forma:<span class="sintexe">&ltTAG&gt</span></p> 
         <p>Por exemplo:</p> 
-        <p><span class="exemplo">&lth1&gt</span>: É uma tag para titulos principais da pagina.</p>
-        <p>Alem disso, muitas tags tem conteudo. Por exeplo: <span class="exemplo">&lth1&gtTITULO: HTML &lt/h1&gt </span>. 
-            Note que usamos o contrabarra+NOMEE_DA_TAG para fechar o conteudo. </p>
+        <p><span class="exemplo">&lth1&gt</span>: É uma tag para titulos principais da pagina.Dessa forma: <span class="exemplo">&lth1&gtTITULO_PRINCIPAL&lt/h1&gt </span>.</p>
+        <p>Note que usamos o <span class="sintexe">&lt/NOME_DA_TAG&gt</span> para fechar o conteudo.</p>
+        <p>Um detalhe interessante que nem toda tag vai ter um conteudo, mas falaremos disso depois, por enquato veremos aquelas que tem. Oque voce precisa saber por agora é que se ela tem conteudo precisa desse fechamente, se não tiver conteudo não precisa ser fechada.</p>
         
             
         <h2>Atributo</h2>
-        <p>Muitas tags tem atributos. Ele vem na sua definição ficando &ltNOME_DA_TAG ATRIBUTO=VALOR&gt.
-            Por exemplo:</p>
-        <p>&ltimg src="endereço_da_imagem"&gt</p>
-        <p>&lttag atributo="valor"&gt</p>
-        <p>Veja que não tem conteudo em si, então não precisa de tag de fechamento (/mome_da_tag)</p>
+        <p>Muitas tags tem atributos. Ele vem para definir algo que apenas a tag não tem como saber, então precisa de atributo.</p>
+        <p>A sintese é: <span class="sintexe">&ltNOME_DA_TAG ATRIBUTO=VALOR&gt.</span></p>
+        <p>Por exemplo:</p>
+        <p><span class="exemplo">&ltimg src="endereço_da_imagem"&gt</span></p>
+        <p>Veja que não tem conteudo em si, o atributo vai na tag, dentro do sinal de maior e menor, então não precisa de tag de fechamento (/mome_da_tag)</p>
 
-
-        <h2>Estrutura valida do documento</h2>
-        //deixa em forma de lista
-        <p>Para ser valido o documento precisa de:</p>
+        <h2>Estrutura válida do documento</h2>
+        <p>Para ser válido, o documento precisa de:</p>
         <ol>
-            <li>&lthtml&gt</li>
-            <li>&lthead&gt</li>
-            <li>&ltbody&gt</li>
+            <li>&lt;html&gt;</li>
+            <li>&lt;head&gt;</li>
+            <li>&lt;body&gt;</li>
         </ol>
 
-        <p>Dessa forma, veremos cada uma</p>
-
+        <p>Dessa forma, veremos cada uma:</p>
 
         <dl>
-            <dt>&lthtml&gt</dt>
+            <dt>&lt;html&gt;</dt>
             <dd>
-                <p>Na estrutura do documento inserimos antes de tudo essa tag: &lthtml&gt.
-                Dentro dela temos duas tags. Quando tag esta dentro de outra podemos dizer que elas são filhas (internas) e mãe (externa).As duas filhas pode ser chamadas de irmãs.</p>
-                <p>&lthtml&gt</p>
-                    <p>&lthead&gt&lt/head&gt</p>
-                    <p>&ltbody&gt&lt/body&gt</p>
-                <p>&lt/html&gt</p>
+                <p>Na estrutura do documento, inserimos, antes de tudo, essa tag: <span class="sintexe">&lt;html&gt</span>;.
+                Dentro dela temos duas tags. Quando uma tag está dentro de outra, podemos dizer que elas são filhas (internas) e mãe (externa). As duas filhas podem ser chamadas de irmãs.</p>
+                <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">html</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">head</span><span class="tag-branco">&gt;</span><span class="tag-branco">&lt;/</span><span class="tag">head</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">body</span><span class="tag-branco">&gt;</span><span class="tag-branco">&lt;/</span><span class="tag">body</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">html</span><span class="tag-branco">&gt;</span></code></pre>
+                </div>
             </dd>
-            <dt>&lthead&gt</dt>
+            
+            <dt>&lt;head&gt;</dt>
             <dd>
-                <p>Contem informações sobre o documento que interessa apenas ao navegador e não ao usuario visitante.</p>
-                <p>Dentro dela precisa obricatoriamente tem um titulo, e usamos a tag: &lttitle&gt</p>
-                <p>Como title esta dentro do head não vai aparecer para o usuario na tela, ela é o titulo do documento, e ficará na barra de titulo no topo do navegador</p>
-                <p>Para a configuração de idiomas como o portugues que usa caracteres com acento, usamos o encoding ou charset. Fica na tag &ltmeta&gt.
-                    Atualmente usamos o UTF-8, mas ja usamos o latin1 </p>
-                <p>&lthtml&gt</p>
-                    <p>&lthead&gt&lt/head&gt</p>
-                        <p>&ltmetaa charset="utf-8"&gt</p>
-                        <p>&lttitle&gtTITULO_DO_DOCUMENTO&lt/title&gt</p>
-                    <p>&ltbody&gt&lt/body&gt</p>
-                <p>&lt/html&gt</p>
+                <p>Contém informações sobre o documento que interessam apenas ao navegador e não ao usuário visitante.</p>
+                <p>Dentro dela precisa obrigatoriamente ter um título, e usamos a tag: <span class="sintexe">&lt;title&gt;</span>.</p>
+                <p>Como o title está dentro do head, não vai aparecer para o usuário na tela; ela é o título do documento e ficará na barra de título no topo do navegador.</p>
+                <p>Para a configuração de idiomas como o português, que usa caracteres com acento, usamos o encoding ou charset. Fica na tag <span class="sintexe">&lt;meta&gt;</span>.</p>
+                <p>Atualmente usamos o UTF-8, mas já usamos o latin1.</p>
+                <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">html</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">head</span><span class="tag-branco">&gt;</span>
+        <span class="tag-branco">&lt;</span><span class="tag">meta</span> <span class="tag">charset = "</span><span class="tag-branco">utf-8</span><span class="tag">"</span><span class="tag-branco">&gt;</span>
+        <span class="tag-branco">&lt;</span><span class="tag">title</span><span class="tag-branco">&gt;</span><span class="tag-branco">TITULO_DO_DOCUMENTO</span><span class="tag-branco">&lt;/</span><span class="tag">title</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;/</span><span class="tag">head</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">body</span><span class="tag-branco">&gt;</span><span class="tag-branco">&lt;/</span><span class="tag">body</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">html</span><span class="tag-branco">&gt;</span></code></pre>
+                </div>
             </dd>
-            <dt>&ltbody&gt</dt>
+            
+            <dt>&lt;body&gt;</dt>
             <dd>
-                <p>Aqui tudo que estiver será exibido para o usuario visitante.</p>
-                <p>Deverá ter um ou mais tags ali dentro.</p>
-                <p>&lthtml&gt</p>
-                    <p>&lthead&gt&lt/head&gt</p>
-                        <p>&ltmetaa charset="utf-8"&gt</p>
-                        <p>&lttitle&gtTITULO_DO_DOCUMENTO&lt/title&gt</p>
-                    <p>&ltbody&gt</p>
-                        <p>&lth1&gtTitulo_principal_que_aparece_para_o_usuario&lt/h1&gt</p>
-                    <p>&lt/body&gt</p>
-                <p>&lt/html&gt</p>
+                <p>Aqui, tudo que estiver será exibido para o usuário visitante.</p>
+                <p>Deverá ter uma ou mais tags ali dentro.</p>
+                <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">html</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">head</span><span class="tag-branco">&gt;</span>
+        <span class="tag-branco">&lt;</span><span class="tag">meta</span> <span class="tag">charset = "</span><span class="tag-branco">utf-8</span><span class="tag">"</span><span class="tag-branco">&gt;</span>
+        <span class="tag-branco">&lt;</span><span class="tag">title</span><span class="tag-branco">&gt;</span><span class="tag-branco">TITULO_DO_DOCUMENTO</span><span class="tag-branco">&lt;/</span><span class="tag">title</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;/</span><span class="tag">head</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">body</span><span class="tag-branco">&gt;</span>
+        <span class="tag-branco">&lt;</span><span class="tag">h1</span><span class="tag-branco">&gt;</span><span class="tag-branco">Título_principal_que_aparece_para_o_usuário</span><span class="tag-branco">&lt;/</span><span class="tag">h1</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;/</span><span class="tag">body</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">html</span><span class="tag-branco">&gt;</span></code></pre>
+                </div>
             </dd>
+            
             <dt>DOCTYPE</dt>
             <dd>
-                <p>Não é tag, é instruções especiais.</p>
-                <p>Fala para o navegador qual versão html deve ser usada.</p>
-                <p>Usamoso &lt!DOCTYPE html&gt. Que indica que deve ser usada a versão mais recente, que atualmente é a versão 5.</p>
+                <p>Não é tag, são instruções especiais.</p>
+                <p>Fala para o navegador qual versão HTML deve ser usada.</p>
+                <p>Usamos o <span class="sintexe"> &lt;!DOCTYPE html&gt;</span>, que indica que deve ser usada a versão mais recente, que atualmente é a versão 5.</p>
             </dd>
         </dl>
 
-        
-        <h2>Estrutura de um documento html</h2>
-        <p>Veremos 3 tags por agora:</p>
-        <p>titulos, paragrafo e enfase</p>
+
+        <h2>Estrutura de um documento HTML</h2>
+        <p>Veremos 3 tags por agora: títulos, parágrafo e ênfase.</p>
         <ol>
-            <li>Titulos</li>
-            <li>Paragrafos</li>
-            <li>Enfase</li>
+            <li>Títulos</li>
+            <li>Parágrafos</li>
+            <li>Ênfase</li>
         </ol>
 
         <dl>
-            <dt>Titulos</dt>
+            <dt>Títulos</dt>
             <dd>
-                <p>Usado as tags de heading, marcada por: &lth_numero&gt</p>
-                <p>&lth1&gt até &lth6&gt. Seguindo a ordem de importancia.</p>
-                <p>Respeitar o nivel de importancia faz o tamanho da forma com que ela vai se apresentar no site, alem de que vai determinar a prioridade de algumas ferrmentas, como a busca do google.</p>
+                <p>Usadas as tags de heading, marcadas por: <span class="sintexe">&lt;h_numero&gt;</span>.</p>
+                <p><span class="sintexe">&lt;h1&gt;</span> até <span class="sintexe">&lt;h6&gt;</span>, seguindo a ordem de importância.</p>
+                <p>Respeitar o nível de importância define o tamanho da forma com que ela vai se apresentar no site, além de que vai determinar a prioridade de algumas ferramentas, como a busca do Google.</p>
             </dd>
-            <dt>Paragrafos</dt>
+            <dt>Parágrafos</dt>
             <dd>
-                <p>Tags de paragrados vem marcada como:&ltp&gtconteudo&lt/p&gt</p>
+                <p>Tags de parágrafos vêm marcadas como: <span class="sintexe">&lt;p&gt;conteúdo&lt;/p&gt;</span>.</p>
             </dd>
-            <dt>Enfase</dt>
+            <dt>Ênfase</dt>
             <dd>
-                <p>Tags para negrito=&lthstrong&gt, para italico=&ltem&gt</p>
+                <p>Tags para negrito = <span class="sintexe">&lt;strong&gt;</span>, para itálico = <span class="sintexe">&lt;em&gt;</span>.</p>
             </dd>
         </dl>
 
-
         <h2>IMAGENS</h2>
-        <p>Tag &ltimg&gt define uma imagem em uma pagina.</p>
-        <p>Deve ter dois atributos preenchidos: src e alt</p>
-        <p>O atributo src é otrigatorio, aponta o local da imagem. O alt é um texto alternativo para caso não carregue a imagem</p>
-        <p>O HTML 5 tem uma nova tag, o figure, onde voce pode colocar o img e alem disso, o figcaption, onde voce pode colocar uma legenda</p>
-        <p>&ltfigure&gt</p>
-            <p>&ltimg src="caminho_da_imagem" alt="texto_alternativo"&gt</p>
-            <p>&ltfigcaption&gtLegenda_para_essa_imagem&lt/figcaption&gt</p>
-        <p>&lt/figure&gt</p>
+        <p>Tag <span class="sintexe">&lt;img&gt;</span> define uma imagem em uma página.</p>
+        <p>Deve ter dois atributos preenchidos: src e alt.</p>
+        <p>O atributo src é obrigatório, aponta o local da imagem. O alt é um texto alternativo para o caso de a imagem não carregar.</p>
+        <p>O HTML5 tem uma nova tag, o figure, onde você pode colocar o img e, além disso, o figcaption, onde você pode colocar uma legenda.</p>
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">figure</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">img</span> <span class="tag">src = "</span><span class="tag-branco">caminho_da_imagem</span><span class="tag">" alt = "</span><span class="tag-branco">texto_alternativo</span><span class="tag">" </span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">figcaption</span><span class="tag-branco">&gt;</span><span class="tag-branco">Legenda_para_essa_imagem</span><span class="tag-branco">&lt;/</span><span class="tag">figcaption</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">figure</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
 
 
         <h2>A estrutura dos arquivos de um projeto</h2>
@@ -149,30 +157,33 @@
             <p>img/</p>
         <p>Note que se tiver outros html coleque no mesmo nivel hierarquico do index.html</p>
 
-        
-        <h2>Estilizando com CSS</h2>
-        <p>Quando colocamos uma tag, e ela aparece no navegador, ela tem um estilo padrão, como tamanho, fonte e cor.
-            Mas podemos customizar esse estilo com css.
-        </p>
-        <p>Antigamente usava-se no propeio html. Ex:&lth1&gt&ltfont color="red"&gtTexto&lt/font&gt&lt/h1&gt</p>
+        <div class="definicao">
+            <h2>Oque é CSS?</h2>
+            <p>Quando colocamos uma tag, e ela aparece no navegador, ela tem um estilo padrão, como tamanho, fonte e cor.
+                Mas podemos customizar esse estilo com css.
+            </p>
+            <p>CSS=linguagem separada do html para cuidar da estilização da pagina.</p>
+        </div>
+    
+        <p>Antigamente usava-se no proprio html. Por exemplo:<span class="exemplo">&lth1&gt&ltfont color="red"&gtTexto&lt/font&gt&lt/h1&gt</span></p>
         <p>Assim ficaria vermelho o texto. Mas não usamos mais tags de estilo. Usamos o CSS.</p>
-        <p>CSS=linguagem separada do html para cuidar da estilização da pagina.</p>
+        
     
 
         <h2>Sintaxe e Inclusão do CSS</h2>
         <p>Propriedade e valores separados por um sinal de dois pontos ":", e cada conjunto de propriedade+valor separam-se de outra propriedade+valor com um ponto e virgula ";"</p>
-        <p>{color: blue;
-            background-color: yellow;}
-        </p>
+        <p>Por exemplo:</p>
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">{color: blue;
+background-color: yellow;}</span></pre></code>
+        </div>
+        
         <p>Nesse exemplo as tags que forem encapsulada com esse css vai ficar azul, com fundo amarelo</p>
         <p>Podemos usar o css no html tambem. Mas voce não acabou de dizer que ele existe justamente para sair do html?
-            Calma, antes do css usavamos tags de estilo, não usamos mais tags de estilo, usamos o css, que tem uma sintese especifica, e que pode ser usada no htl ou em um arquivo separado (melhor pratica)
-        </p>
-        <p>Ex de css dentro do html:&ltp style="color: blue; background-color:yellow;"&gt
-            Conteudo&lt/p&gt
-        </p>
+            Calma, antes do css usavamos tags de estilo, não usamos mais tags de estilo, usamos o css, que tem uma sintese especifica, e que pode ser usada no htl ou em um arquivo separado (melhor pratica)</p>
+        <p>Exemplo de css dentro do html: <span class="exemplo">&ltp style="color: blue; background-color:yellow;"&gt Conteudo &lt/p&gt</span></p>
         <p>Alem disso, outra forma de usar css dentro do html seria, ao inves de tag de estilo (não usadas) e ao inves de integrar a uma tag como vimos ela no &ltp&gt,
-            podemos usar uma tag criada para o css: &ltstyle&gt.
+            podemos usar uma tag criada para o css: <span class="sintexe">&lt;style&gt;.</span>
             Note que não é uma tag de estilo (que não deve ser usada), é uma tag propria para o css, que agrupa o css em sua propria sintexe. 
         </p>
         <p>Tanto nessa ultima forma quanto css em outro arquivo usamos o seletor css para indicar qual tag vamos estilizar</p>
@@ -425,5 +436,6 @@
             word-spacing: 0.16em;	/* tamanho do espaço entre cada palavra */</p>
         <p>Mas é claro que isso vai depender da fonte e bom senso, verifique as diretrizes de acessibilidade.</p>
 
+        
 </body>
 </html>
