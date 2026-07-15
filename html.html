@@ -6,34 +6,30 @@
 </head>
 <body>
     <div class="container">
-        <h1>AULA 1:HTML e CSS</h1>
-
-
+        <h1>AULA 1: HTML e CSS</h1>
 
         <div class="definicao">
-            <h2>Oque é html?</h2>
-            <p>Esqueleto do navegador, sua estrutura de forma bruta, sem a estetica. 
-            De forma mais formal, é a marcação do conteudo na pagina WEB.  
+            <h2>O que é HTML?</h2>
+            <p>Esqueleto do navegador, sua estrutura de forma bruta, sem a estética. 
+            De forma mais formal, é a marcação do conteúdo na página WEB.  
             </p>
         </div>
 
-        
         <h2>Tags</h2>
-        <p>São como etiquetas. O HTML define que os conteudos se entiquetado com a etiqueta(tag) que  mais convem  para cada conteudo.</p>
-        <p>Dessa forma, a sintexe do html é feita na forma <span class="sintexe">&lt<span class="piscar">_</span>&gt</span>.</p>
-        <p>Assim, oque vem dentro do sinal de maior e menor, deve ter um nome especifico que melhor representa o conteudo que voce quer colocar, dessa forma:<span class="sintexe">&ltTAG&gt</span></p> 
+        <p>São como etiquetas. O HTML define que os conteúdos sejam etiquetados com a etiqueta (tag) que mais convém para cada conteúdo.</p>
+        <p>Dessa forma, a sintaxe do HTML é feita na forma <span class="sintexe">&lt;<span class="piscar">_</span>&gt;</span>.</p>
+        <p>Assim, o que vem dentro do sinal de maior e menor deve ter um nome específico que melhor representa o conteúdo que você quer colocar, dessa forma: <span class="sintexe">&lt;TAG&gt;</span>.</p> 
         <p>Por exemplo:</p> 
-        <p><span class="exemplo">&lth1&gt</span>: É uma tag para titulos principais da pagina.Dessa forma: <span class="exemplo">&lth1&gtTITULO_PRINCIPAL&lt/h1&gt </span>.</p>
-        <p>Note que usamos o <span class="sintexe">&lt/NOME_DA_TAG&gt</span> para fechar o conteudo.</p>
-        <p>Um detalhe interessante que nem toda tag vai ter um conteudo, mas falaremos disso depois, por enquato veremos aquelas que tem. Oque voce precisa saber por agora é que se ela tem conteudo precisa desse fechamente, se não tiver conteudo não precisa ser fechada.</p>
+        <p><span class="exemplo">&lt;h1&gt;</span>: É uma tag para títulos principais da página. Dessa forma: <span class="exemplo">&lt;h1&gt;TITULO_PRINCIPAL&lt;/h1&gt;</span>.</p>
+        <p>Note que usamos o <span class="sintexe">&lt;/NOME_DA_TAG&gt;</span> para fechar o conteúdo.</p>
+        <p>Um detalhe interessante é que nem toda tag vai ter um conteúdo, mas falaremos disso depois; por enquanto veremos aquelas que têm. O que você precisa saber por agora é que se ela tem conteúdo precisa desse fechamento, se não tiver conteúdo não precisa ser fechada.</p>
         
-            
         <h2>Atributo</h2>
-        <p>Muitas tags tem atributos. Ele vem para definir algo que apenas a tag não tem como saber, então precisa de atributo.</p>
-        <p>A sintese é: <span class="sintexe">&ltNOME_DA_TAG ATRIBUTO=VALOR&gt.</span></p>
+        <p>Muitas tags têm atributos. Ele vem para definir algo que apenas a tag não tem como saber, então precisa de atributo.</p>
+        <p>A sintaxe é: <span class="sintexe">&lt;NOME_DA_TAG ATRIBUTO=VALOR&gt;</span>.</p>
         <p>Por exemplo:</p>
-        <p><span class="exemplo">&ltimg src="endereço_da_imagem"&gt</span></p>
-        <p>Veja que não tem conteudo em si, o atributo vai na tag, dentro do sinal de maior e menor, então não precisa de tag de fechamento (/mome_da_tag)</p>
+        <p><span class="exemplo">&lt;img src="endereço_da_imagem"&gt;</span></p>
+        <p>Veja que não tem conteúdo em si, o atributo vai na tag, dentro do sinal de maior e menor, então não precisa de tag de fechamento (/nome_da_tag).</p>
 
         <h2>Estrutura válida do documento</h2>
         <p>Para ser válido, o documento precisa de:</p>
@@ -48,7 +44,7 @@
         <dl>
             <dt>&lt;html&gt;</dt>
             <dd>
-                <p>Na estrutura do documento, inserimos, antes de tudo, essa tag: <span class="sintexe">&lt;html&gt</span>;.
+                <p>Na estrutura do documento, inserimos, antes de tudo, essa tag: <span class="sintexe">&lt;html&gt;</span>.
                 Dentro dela temos duas tags. Quando uma tag está dentro de outra, podemos dizer que elas são filhas (internas) e mãe (externa). As duas filhas podem ser chamadas de irmãs.</p>
                 <div class="tela-programa">
 <pre><code><span class="tag-branco">&lt;</span><span class="tag">html</span><span class="tag-branco">&gt;</span>
@@ -101,7 +97,6 @@
             </dd>
         </dl>
 
-
         <h2>Estrutura de um documento HTML</h2>
         <p>Veremos 3 tags por agora: títulos, parágrafo e ênfase.</p>
         <ol>
@@ -139,97 +134,104 @@
 <span class="tag-branco">&lt;/</span><span class="tag">figure</span><span class="tag-branco">&gt;</span></code></pre>
         </div>
 
-
         <h2>A estrutura dos arquivos de um projeto</h2>
-        <p>Aqui temos recomendações, mas não regras, podendo adaptar para seu projeto</p>
+        <p>Aqui temos recomendações, mas não regras, podendo adaptar para seu projeto.</p>
         <p>Geralmente fica tudo em uma pasta, e para ela tem uma "capa".
-            Essa capa é uma pagina inicial que indica para o visitante quais são as outras paginas que fazem parte desse projeto e como pode acessa-las, como um indice.
+            Essa capa é uma página inicial que indica para o visitante quais são as outras páginas que fazem parte desse projeto e como pode acessá-las, como um índice.
         </p>
-        //icone de pasta e de pagina
         <p>Pasta_nome_do_projeto</p>
             <p>index.html</p>
-        <p>Então para o css usamos uma pasta, e para o js tambem, alem de ser conveniente ter uma pasta para imagem</p>
+        <p>Então para o CSS usamos uma pasta, e para o JS também, além de ser conveniente ter uma pasta para imagem.</p>
         <p>Pasta_nome_do_projeto</p>
             <p>index.html</p>
             <p>sobre.html</p>
             <p>css/</p>
             <p>js/</p>
             <p>img/</p>
-        <p>Note que se tiver outros html coleque no mesmo nivel hierarquico do index.html</p>
+        <p>Note que se tiver outros HTML coloque no mesmo nível hierárquico do index.html.</p>
 
         <div class="definicao">
-            <h2>Oque é CSS?</h2>
+            <h2>O que é CSS?</h2>
             <p>Quando colocamos uma tag, e ela aparece no navegador, ela tem um estilo padrão, como tamanho, fonte e cor.
-                Mas podemos customizar esse estilo com css.
+                Mas podemos customizar esse estilo com CSS.
             </p>
-            <p>CSS=linguagem separada do html para cuidar da estilização da pagina.</p>
+            <p>CSS = linguagem separada do HTML para cuidar da estilização da página.</p>
         </div>
     
-        <p>Antigamente usava-se no proprio html. Por exemplo:<span class="exemplo">&lth1&gt&ltfont color="red"&gtTexto&lt/font&gt&lt/h1&gt</span></p>
+        <p>Antigamente usava-se no próprio HTML. Por exemplo: <span class="exemplo">&lt;h1&gt;&lt;font color="red"&gt;Texto&lt;/font&gt;&lt;/h1&gt;</span></p>
         <p>Assim ficaria vermelho o texto. Mas não usamos mais tags de estilo. Usamos o CSS.</p>
-        
-    
 
         <h2>Sintaxe e Inclusão do CSS</h2>
-        <p>Propriedade e valores separados por um sinal de dois pontos ":", e cada conjunto de propriedade+valor separam-se de outra propriedade+valor com um ponto e virgula ";"</p>
+        <p>Propriedade e valores separados por um sinal de dois pontos ":", e cada conjunto de propriedade+valor separa-se de outra propriedade+valor com um ponto e vírgula ";"</p>
         <p>Por exemplo:</p>
         <div class="tela-programa">
-<pre><code><span class="tag-branco">{color: blue;
-background-color: yellow;}</span></pre></code>
+<pre><code><span class="tag-branco">{</span>
+    <span class="tag">color</span>: <span class="tag-branco">blue;</span>
+    <span class="tag">background-color</span>: <span class="tag-branco">yellow;</span>
+<span class="tag-branco">}</span></code></pre>
         </div>
         
-        <p>Nesse exemplo as tags que forem encapsulada com esse css vai ficar azul, com fundo amarelo</p>
-        <p>Podemos usar o css no html tambem. Mas voce não acabou de dizer que ele existe justamente para sair do html?
-            Calma, antes do css usavamos tags de estilo, não usamos mais tags de estilo, usamos o css, que tem uma sintese especifica, e que pode ser usada no htl ou em um arquivo separado (melhor pratica)</p>
-        <p>Exemplo de css dentro do html: <span class="exemplo">&ltp style="color: blue; background-color:yellow;"&gt Conteudo &lt/p&gt</span></p>
-        <p>Alem disso, outra forma de usar css dentro do html seria, ao inves de tag de estilo (não usadas) e ao inves de integrar a uma tag como vimos ela no &ltp&gt,
-            podemos usar uma tag criada para o css: <span class="sintexe">&lt;style&gt;.</span>
-            Note que não é uma tag de estilo (que não deve ser usada), é uma tag propria para o css, que agrupa o css em sua propria sintexe. 
+        <p>Nesse exemplo as tags que forem encapsuladas com esse CSS vão ficar azuis, com fundo amarelo.</p>
+        <p>Podemos usar o CSS no HTML também. Mas você não acabou de dizer que ele existe justamente para sair do HTML?
+            Calma, antes do CSS usávamos tags de estilo, não usamos mais tags de estilo, usamos o CSS, que tem uma sintaxe específica, e que pode ser usada no HTML ou em um arquivo separado (melhor prática).</p>
+        <p>Exemplo de CSS dentro do HTML: <span class="exemplo">&lt;p style="color: blue; background-color: yellow;"&gt; Conteúdo &lt;/p&gt;</span></p>
+        <p>Além disso, outra forma de usar CSS dentro do HTML seria, ao invés de tag de estilo (não usadas) e ao invés de integrar a uma tag como vimos ela no &lt;p&gt;,
+            podemos usar uma tag criada para o CSS: <span class="sintexe">&lt;style&gt;</span>.
+            Note que não é uma tag de estilo (que não deve ser usada), é uma tag própria para o CSS, que agrupa o CSS em sua própria sintaxe. 
         </p>
-        <p>Tanto nessa ultima forma quanto css em outro arquivo usamos o seletor css para indicar qual tag vamos estilizar</p>
-        <p>&ltstyle&gt</p>
-            <p>p{
-                color: blue;
-                background-color: yellow;
-                }</p>
-        <p>&lt/style&gt</p>
-        <p>No exemplo acima significa que todas as tag p (p sendo o seletor css) terá esse estilo.</p>
-        <p>Observação:Essa forma, com a tag style, deve ser colocada no head</p>
-
-        <h3>Arquivo exteno</h3>
-        <p>Para ter o css em um outro arquivo, devemos conectar o css ao html, para isso usamos a extensão .css, ou seja, seu arquivo css deve ser NOME_DO_ARQUIVO.css</p>
-        <p>Colocamos um link no head: &ltlink rel=stylesheet" href="estilo.css"&gt</p>
-
+        <p>Tanto nessa última forma quanto no CSS em outro arquivo usamos o seletor CSS para indicar qual tag vamos estilizar.</p>
         
-        <h2>Propriedades tipograficas e fontes</h2>
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">style</span><span class="tag-branco">&gt;</span>
+    <span class="tag">p</span> <span class="tag-branco">{</span>
+        <span class="tag">color</span>: <span class="tag-branco">blue;</span>
+        <span class="tag">background-color</span>: <span class="tag-branco">yellow;</span>
+    <span class="tag-branco">}</span>
+<span class="tag-branco">&lt;/</span><span class="tag">style</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
+        
+        <p>No exemplo acima significa que todas as tags p (p sendo o seletor CSS) terão esse estilo.</p>
+        <p>Observação: Essa forma, com a tag style, deve ser colocada no head.</p>
+
+        <h3>Arquivo externo</h3>
+        <p>Para ter o CSS em um outro arquivo, devemos conectar o CSS ao HTML; para isso usamos a extensão .css, ou seja, seu arquivo CSS deve ser NOME_DO_ARQUIVO.css.</p>
+        <p>Colocamos um link no head: <span class="sintexe">&lt;link rel="stylesheet" href="estilo.css"&gt;</span></p>
+
+        <h2>Propriedades tipográficas e fontes</h2>
 
         <h3>Propriedade font-family</h3>
-        <p>Recebe o valor com ou sem aspas, primeiramente veremos com as familias.</p>
-        <p>As fontes tem familias</p>
-        <p>Serif: São chamadas de fontes serifadas, por conta do pequeno ornamento em sua terminação, e costuma ser a padão. As mais usadas é times e times new roman</p>
+        <p>Recebe o valor com ou sem aspas, primeiramente veremos com as famílias.</p>
+        <p>As fontes têm famílias:</p>
+        <p>Serif: São chamadas de fontes serifadas, por conta do pequeno ornamento em sua terminação, e costuma ser a padrão. As mais usadas são times e times new roman.</p>
         <p>Sans-serif: Podemos usar sem serifas, como por exemplo Arial, Helvetica.</p>
-        <p>Monospace: como por exemplo a fonte Courier.</p>
-        <p>Ex:
-            h1{
-                font-family: serif;
-            }
-        </p>
-        <p>Podemos usar a fonte especifica alem da familia</p>
-        <p>Ex:
-            h1{
-                font-family: "times", serif;
-            }
-        </p>
-        <p>Podemos colocar uma segunda opção para o navegador caso ele não tenha dispovinvel a primeira</p>
-        <p>Ex:
-            h1{
-                font-family: "times", "times new roman", serif;
-            }
-        </p>
-        <p>Se não tiver a primeira, verificará a segunda, se não tiver a segunda, diz para ser qualquer uma serif</p>
+        <p>Monospace: Como por exemplo a fonte Courier.</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag">h1</span> <span class="tag-branco">{</span>
+    <span class="tag">font-family</span>: <span class="tag-branco">serif;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+        
+        <p>Podemos usar a fonte específica além da família.</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag">h1</span> <span class="tag-branco">{</span>
+    <span class="tag">font-family</span>: <span class="tag-branco">"times", serif;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+        
+        <p>Podemos colocar uma segunda opção para o navegador caso ele não tenha disponível a primeira.</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag">h1</span> <span class="tag-branco">{</span>
+    <span class="tag">font-family</span>: <span class="tag-branco">"times", "times new roman", serif;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+        
+        <p>Se não tiver a primeira, verificará a segunda; se não tiver a segunda, diz para ser qualquer uma serif.</p>
         
         <h3>Propriedade font-style</h3>
-        <p>Define o estilo da fonte. Normal, italic e oblique</p>
+        <p>Define o estilo da fonte: normal, italic e oblique.</p>
 
         <h2>Alinhamento e decoração de texto</h2>
         <h3>Propriedade text-align</h3>
@@ -238,204 +240,257 @@ background-color: yellow;}</span></pre></code>
         <p>text-align: left = esquerda</p>
         <p>text-align: center = centro</p>
         <p>text-align: justify = justificado</p>
-        <p>É possivel configurar outros espaçamentos de texto</p>
-        <p>p{
-            line-height: 3px; /* tamanho da altura de cada linha */
-            letter-spacing: 3px; /* tamanho	do espaço entre	cada letra */
-            word-spacing: 5px;	/* tamanho do espaço entre cada palavra */
-            text-indent: 30px;	/* tamanho da margem da	primeira linha do texto	*/
-            }
-        </p>
-
+        <p>É possível configurar outros espaçamentos de texto:</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag">line-height</span>: <span class="tag-branco">3px;</span> <span class="comment">/* tamanho da altura de cada linha */</span>
+    <span class="tag">letter-spacing</span>: <span class="tag-branco">3px;</span> <span class="comment">/* tamanho do espaço entre cada letra */</span>
+    <span class="tag">word-spacing</span>: <span class="tag-branco">5px;</span>  <span class="comment">/* tamanho do espaço entre cada palavra */</span>
+    <span class="tag">text-indent</span>: <span class="tag-branco">30px;</span>  <span class="comment">/* tamanho da margem da primeira linha 
+        do texto */</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
 
         <h2>Imagem de Fundo</h2>
-        <p>h1{
-            background-image: url(arquivo.jpg);
-            }</p>
-        <p>Serve para colocar uma imagem no fundo da tag. Precisa esta na mesma pasta css</p>
-
+        
+        <div class="tela-programa">
+<pre><code><span class="tag">h1</span> <span class="tag-branco">{</span>
+    <span class="tag">background-image</span>: <span class="tag-branco">url(arquivo.jpg);</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+        
+        <p>Serve para colocar uma imagem no fundo da tag. Precisa estar na mesma pasta CSS.</p>
 
         <h2>Bordas</h2>
-        <p>body{
-            border-color: red; /*Cor*/
-            border-style: solid; /*Estilo de exibição*/
-            border-width: 1px; /*Largura*/
-            }</p>
-        <p>Pode ser otimizado como:</p>
-        <p>body{
-                border: 1px solid red;
-            }</p>
-
         
+        <div class="tela-programa">
+<pre><code><span class="tag">body</span> <span class="tag-branco">{</span>
+    <span class="tag">border-color</span>: <span class="tag-branco">red;</span> <span class="comment">/*Cor*/</span>
+    <span class="tag">border-style</span>: <span class="tag-branco">solid;</span> <span class="comment">/*Estilo de exibição*/</span>
+    <span class="tag">border-width</span>: <span class="tag-branco">1px;</span> <span class="comment">/*Largura*/</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+        
+        <p>Pode ser otimizado como:</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag">body</span> <span class="tag-branco">{</span>
+    <span class="tag">border</span>: <span class="tag-branco">1px solid red;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
         <h2>Cores na web</h2>
-        <p>Podemos definir cor pelo seu nome</p>
-        <p>h1{
-            color: red;
-            }
+        <p>Podemos definir cor pelo seu nome:</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag">h1</span> <span class="tag-branco">{</span>
+    <span class="tag">color</span>: <span class="tag-branco">red;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+        
+        <p>Mas não tem variação só escrevendo o nome; se você quer um tom específico é mais fácil usar a composição RGB.
+            16 milhões de cores combinando 3 cores bases: Vermelho (Red), Verde (Green), Azul (Blue).
+            Então cada uma dessas três vai de 0 a 255; por exemplo, amarelo forte = (255, 255, 0).
         </p>
-        <p>Mas não tem variação só escrevendo o nome, voce que um tom especifico é mais facil usar a composição RGB.
-            16 milhoes de corem combinando 3 cores bases:Vermelho (red), Verde (Green), Azul (Blue).
-            Enão cada uma dessas tres vai de 0 a 255, por exemplo, amarelo forte = (255, 255, 0)
-        </p>
-        <p>A sintexe:</p>
-        <p>h1{
-            color: rgb(255, 255, 0);
-            }
-        </p>
-        <p>No entanto, o mas usado é a notação hexadecimal.
-            Usamos o #, depois temos dois caracter para o Red, dois para o Green e dois para o Blue.
-            Com dois caracter em hexadecimal, podemos escrever facilmente esses 255 valores de cada cor, por exemplo:
+        <p>A sintaxe:</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag">h1</span> <span class="tag-branco">{</span>
+    <span class="tag">color</span>: <span class="tag-branco">rgb(255, 255, 0);</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+        
+        <p>No entanto, o mais usado é a notação hexadecimal.
+            Usamos o #, depois temos dois caracteres para o Red, dois para o Green e dois para o Blue.
+            Com dois caracteres em hexadecimal, podemos escrever facilmente esses 255 valores de cada cor; por exemplo:
             rgb(242, 237, 237), 242=F2, 237=ED, 237=ED, então fica #F2EDED.
         </p>
 
-
-        <h2>Listas Html</h2>
-        <p>Pare exibir uma listagem não ordenada</p>
-        <p>&ltul&gt</p>
-            <p>&ltli&gtPrimeiro item da lista&lt/li&gt</p>
-            <p>&ltli&gtSegundo intem da lista:</p>
-                <p>&ltul&gt</p>
-                    <p>&ltli&gtPrimeiro item da lista aninhada, ou seja topicos de um topico da lista&lt/li&gt</p>
-                    <p>&ltli&gtSegundo item da lista aninhada&lt/li&gt</p>
-                <p>&lt/ul&gt</p>
-            <p>&lt/li&gt</p>
-            <p>&ltli&gtTerceiro item da lista&lt/li&gt</p>
-        <p>&lt/ul&gt</p>
-        <p>Para exibir uma listagem ordenada</p>
-        <p>&ltol&gt</p>
-            <p>&ltli&gtPrimeiro item da lista&lt/li&gt</p>
-            <p>&ltli&gtSegundo item da lista&lt/li&gt</p>
-            <p>&ltli&gtTerceiro item da lista&lt/li&gt</p>
-            <p>&ltli&gtQuarto item da lista&lt/li&gt</p>
-        <p>&lt/ol&gt</p>
-        <p>Podemos misturar esses dois tipos tambem</p>
-        <p>Existe tambem o tipo de glosario, que usamos para listar termos e significado, que é chamada de lista de definição</p>
-        <p>&ltd1&gt</p>
-            <p>&ltdt&gtTERMO1&lt/dt&gt</p>
-            <p>&ltdd&gt</p>
-                <p>Significado do termo1</p>
-            <p>&lt/dd&gt</p>
-            <p>&ltdt&gtTERMO2&lt/dt&gt</p>
-            <p>&ltdd&gt</p>
-                <p>Significado do termo1</p>
-            <p>&lt/dd&gt</p>
-        <p>&lt/d1&gt</p>
+        <h2>Listas HTML</h2>
+        <p>Para exibir uma listagem não ordenada:</p>
         
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">ul</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span>Primeiro item da lista<span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span>Segundo item da lista:
+        <span class="tag-branco">&lt;</span><span class="tag">ul</span><span class="tag-branco">&gt;</span>
+            <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span>Primeiro item da lista aninhada, 
+            ou seja, tópicos de um tópico da lista<span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+            <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span>Segundo item da lista aninhada<span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+        <span class="tag-branco">&lt;/</span><span class="tag">ul</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span>Terceiro item da lista<span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">ul</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
+        
+        <p>Para exibir uma listagem ordenada:</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">ol</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span>Primeiro item da lista<span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span>Segundo item da lista<span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span>Terceiro item da lista<span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span>Quarto item da lista<span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">ol</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
+        
+        <p>Podemos misturar esses dois tipos também.</p>
+        <p>Existe também o tipo de glossário, que usamos para listar termos e significados, que é chamada de lista de definição:</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">dl</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">dt</span><span class="tag-branco">&gt;</span>TERMO1<span class="tag-branco">&lt;/</span><span class="tag">dt</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">dd</span><span class="tag-branco">&gt;</span>
+        Significado do termo1
+    <span class="tag-branco">&lt;/</span><span class="tag">dd</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">dt</span><span class="tag-branco">&gt;</span>TERMO2<span class="tag-branco">&lt;/</span><span class="tag">dt</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">dd</span><span class="tag-branco">&gt;</span>
+        Significado do termo2
+    <span class="tag-branco">&lt;/</span><span class="tag">dd</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">dl</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
 
         <h2>Espaçamento, Margem e Dimensões</h2>
 
         <h3>Padding</h3>
-        <p>ESpaçamento:Para definir espaçamento interno em algum elemento, ou seja, o limite de sua borda ao conteudo</p>
+        <p>Espaçamento: Para definir espaçamento interno em algum elemento, ou seja, o limite de sua borda ao conteúdo.</p>
         <p>padding-top</p>
         <p>padding-right</p>
-        <p>paddong-bottom</p>
+        <p>padding-bottom</p>
         <p>padding-left</p>
-        <p>Esssas propriedade aplicam uma distancia entre o limite do elemento e seus conteudo acima, direira, abaixo e esquerda.
-            Podemos Podemos definir essas subpropriedades comum unico comando que seja jogado para todos
+        <p>Essas propriedades aplicam uma distância entre o limite do elemento e seu conteúdo acima, direita, abaixo e esquerda.
+            Podemos definir essas subpropriedades com um único comando que seja jogado para todos:
         </p>
-        <p>p{
-                padding:10px;
-            }
-        </p>
-        <p>Se passar dois valores,  o primeiro sera mandado para cima e para baixo, o segundo para esquerda e direita</p>
-        <p>Se passar 3 valores, o primeiro sera mandado para cima, o segundo para direita e esquerda, e o terceiropara baixo</p>
-        <p>Se passar 4 valores, respectivamente: cima, direita, baixo, esquerda</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag">padding</span>: <span class="tag-branco">10px;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+        
+        <p>Se passar dois valores, o primeiro será mandado para cima e para baixo, o segundo para esquerda e direita.</p>
+        <p>Se passar 3 valores, o primeiro será mandado para cima, o segundo para direita e esquerda, e o terceiro para baixo.</p>
+        <p>Se passar 4 valores, respectivamente: cima, direita, baixo, esquerda.</p>
+        
         <h3>Margin</h3>
-        <p>Margem:Parecido com a anterior, mas vai dar um espaço apos o elemento em si, ou seja, alem dele</p>
-        <p>As subpropriedade são as mesmas e funciona da mesma forma:</p>
+        <p>Margem: Parecido com a anterior, mas vai dar um espaço após o elemento em si, ou seja, além dele.</p>
+        <p>As subpropriedades são as mesmas e funcionam da mesma forma:</p>
         <p>margin-top</p>
         <p>margin-right</p>
         <p>margin-bottom</p>
         <p>margin-left</p>
-        <p>O margin permite que o navegador defina qual será a dimensão de paddin ou margin conforme o espaço disponivel na tela, usamos o valor "auto"</p>
-        <p>Para isso é só colocar alto no lugar do valor que voce deseja substituir, exemplo:</p>
-        <p>p{
-                margin: 0 auto;
-            }
-        </p>
-        <p>Então pela regra, temos dois valores, o primeiro seria para cima e baixo, que eu coloquei 0, e o segungo para direita e esquerda, que eu coloquei auto</p>
+        <p>O margin permite que o navegador defina qual será a dimensão de padding ou margin conforme o espaço disponível na tela; usamos o valor "auto".</p>
+        <p>Para isso é só colocar auto no lugar do valor que você deseja substituir, exemplo:</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag">margin</span>: <span class="tag-branco">0 auto;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+        
+        <p>Então pela regra, temos dois valores, o primeiro seria para cima e baixo, que eu coloquei 0, e o segundo para direita e esquerda, que eu coloquei auto.</p>
 
         <h3>Dimensões</h3>
-        <p>Usamos o height (altura) e width (largura)</p>
-        <p>p{
-                height: 300px;
-                width: 300px;
-            }
-        </p>
-        <p>Todos os paragrafos do nosso HTML ocuparão 300 pixels de altura e de largura</p>
-
+        <p>Usamos o height (altura) e width (largura):</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag">height</span>: <span class="tag-branco">300px;</span>
+    <span class="tag">width</span>: <span class="tag-branco">300px;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+        
+        <p>Todos os parágrafos do nosso HTML ocuparão 300 pixels de altura e de largura.</p>
 
         <h2>Elementos estruturais</h2>
-        <p>Quando não achamos a tag certa para um conteudo, podemos usar div ou span, que são como coringas. E veremos que tambem é estilizavel.</p>
+        <p>Quando não achamos a tag certa para um conteúdo, podemos usar div ou span, que são como coringas. E veremos que também é estilizável.</p>
         
-        
-        <h2>CSS:Seletores de ID e filho</h2>
-        <p>Sabemos que é possivel selecionar elementos no css usando o nome da tag, mas e se quisessemos pegar um unico paragrafo?</p>
-
+        <h2>CSS: Seletores de ID e filho</h2>
+        <p>Sabemos que é possível selecionar elementos no CSS usando o nome da tag, mas e se quiséssemos pegar um único parágrafo?</p>
 
         <h3>Seletor ID</h3>
-        <p>Colocaremos um id na tag html, e para pegar no css usamos esse id, que dever ter um # antes</p>
+        <p>Colocaremos um ID na tag HTML, e para pegar no CSS usamos esse ID, que deve ter um # antes.</p>
 
-        <h3>Seletor hierarquico</h3>
-        <p>Podemos ainda utilizar um seletor hierarquico que permite colocar estilos no filho de um elemento mãe.
-            Para isso voce coloca o id na mãe, e na hora de seleconar no css, usa o id+tag filha
+        <h3>Seletor hierárquico</h3>
+        <p>Podemos ainda utilizar um seletor hierárquico que permite colocar estilos no filho de um elemento mãe.
+            Para isso você coloca o ID na mãe, e na hora de selecionar no CSS, usa o ID + tag filha.
         </p>
-        <p>&ltimg src="logo-topo.png"&gt</p>
-        <p>&ltdiv id="rodape"&gt</p>
-            <p>&ltp&gtSiga-nos nas redes sociais:&lt/p&gt</p>
-            <p>&ltimg src="facebook-icon.png"&gt</p>
-            <p>&ltimg src="instagram-icon.png&gt</p>
-        <p>&lt/div&gt</p>
-        <p>Se eu quero apenas as imagensdo facebook e instagram e devo colocar assim no css:</p>
-        <p>#rodape img {
-                margin-right: 30px;
-                vertical-align: middle;
-                width: 94px;
-            }
-        </p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">img</span> <span class="tag">src</span>="logo-topo.png"<span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;</span><span class="tag">div</span> <span class="tag">id</span>="rodape"<span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">p</span><span class="tag-branco">&gt;</span>Siga-nos nas redes sociais:<span class="tag-branco">&lt;/</span><span class="tag">p</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">img</span> <span class="tag">src</span>="facebook-icon.png"<span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">img</span> <span class="tag">src</span>="instagram-icon.png"<span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">div</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
+        
+        <p>Se eu quero apenas as imagens do facebook e instagram, devo colocar assim no CSS:</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag">#rodape img</span> <span class="tag-branco">{</span>
+    <span class="tag">margin-right</span>: <span class="tag-branco">30px;</span>
+    <span class="tag">vertical-align</span>: <span class="tag-branco">middle;</span>
+    <span class="tag">width</span>: <span class="tag-branco">94px;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
 
-
-        <h2>FLuxo do documento e float</h2>
-        <p>Perceba que o html por padrão deixa todo o conteudo um em baixo do outro, como caixas empilhadas, para sai desse fluxo de documento, podemos usar o float.</p>
-        <p>.foto-familia {
-                float: left; /* Faz a imagem flutuar para a esquerda */
-                margin-right: 20px; /* Cria um espaço entre a imagem e o texto ao lado */
-                margin-bottom: 10px; /* Cria um espaço para o texto não colar embaixo */
-                width: 200px; /* Define um tamanho para a imagem */
-            }</p>
+        <h2>Fluxo do documento e float</h2>
+        <p>Perceba que o HTML por padrão deixa todo o conteúdo um embaixo do outro, como caixas empilhadas; para sair desse fluxo de documento, podemos usar o float.</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag">.foto-familia</span> <span class="tag-branco">{</span>
+    <span class="tag">float</span>: <span class="tag-branco">left;</span> <span class="comment">/* Faz a imagem flutuar para a esquerda */</span>
+    <span class="tag">margin-right</span>: <span class="tag-branco">20px;</span> <span class="comment">/* Cria um espaço entre a imagem e o 
+        texto ao lado */</span>
+    <span class="tag">margin-bottom</span>: <span class="tag-branco">10px;</span> <span class="comment">/* Cria um espaço para o texto 
+        não colar embaixo */</span>
+    <span class="tag">width</span>: <span class="tag-branco">200px;</span> <span class="comment">/* Define um tamanho para a imagem */</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+        
         <p>Como o elemento com float sai do fluxo normal da página, os elementos que vêm muito depois dele (como um rodapé ou outra seção) podem tentar subir e se misturar de forma bagunçada.
             Para evitar que isso aconteça, nós usamos uma propriedade chamada clear no elemento que deve ficar obrigatoriamente abaixo de tudo, reiniciando o fluxo normal do HTML.</p>
-        <p>.elemento-de-baixo {
-                clear: both; /* Impede que este elemento suba para o lado de qualquer float */
-            }</p>
-          
+        
+        <div class="tela-programa">
+<pre><code><span class="tag">.elemento-de-baixo</span> <span class="tag-branco">{</span>
+    <span class="tag">clear</span>: <span class="tag-branco">both;</span> <span class="comment">/* Impede que este elemento suba para o lado 
+        de qualquer float */</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
 
-        <h2>Como colocar as faixinhas na direita e esquerda, centralizando o conteudo</h2>
-        <p>Isso não esta no livro, ao menos não nas 50 primeiras paginas.</p>
-        <p>Primeiro colcoamos a pagina inteira em uma div de nome qualquer, por padrão pessoal eu escolho container.</p>
-        <p>Porque não usar o body? Porque ao queresmo mover um bloco inteiro, ele necessariamente precisa ser um bloco, e body não é um bloco, ele é a tela toda, pode até se comportar como bloco, mas pode acabar tem comportamentos inesperados.</p>
-        <p>Então limitamos o tamanho que no container central pode atingir com o width (largura), com um comando especial chamado:</p>
+        <h2>Como colocar as faixinhas na direita e esquerda, centralizando o conteúdo</h2>
+        <p>Isso não está no livro, ao menos não nas 50 primeiras páginas.</p>
+        <p>Primeiro colocamos a página inteira em uma div de nome qualquer; por padrão pessoal, eu escolho container.</p>
+        <p>Por que não usar o body? Porque ao querermos mover um bloco inteiro, ele necessariamente precisa ser um bloco, e body não é um bloco, ele é a tela toda; pode até se comportar como bloco, mas pode acabar tendo comportamentos inesperados.</p>
+        <p>Então limitamos o tamanho que o container central pode atingir com o width (largura), com um comando especial chamado:</p>
         <p>max-width: valor;</p>
-        <p>Note que o max é justamente dizer: maximo da largura</p>
-        <p>Coloca uma margin (margem) para centralizar, cima e baixo deixa em 0, pois não terão margem, e auno na esquerda e na direita, para o navegador dar a margem ideal</p>
-        <p>Como o navegador da a margin ideal?</p>
+        <p>Note que o max é justamente dizer: máximo da largura.</p>
+        <p>Coloque uma margin (margem) para centralizar; cima e baixo deixa em 0, pois não terão margem, e auto na esquerda e na direita, para o navegador dar a margem ideal.</p>
+        <p>Como o navegador dá a margem ideal?</p>
         <p>"Bom, a tela do usuário tem 1920px de largura. O container só precisa de 960px. Sobraram 960px de espaço vazio. Como a margem das laterais está em 'auto', vou dividir esses 960px que sobraram igualmente: 480px para a esquerda e 480px para a direita."</p>
         <p>
-            Verá que tem umas bordinhas no topo e no final, alem do texto esta muito colocado no limite, usaremos o padding para driblar os dois problemas
+            Verá que tem umas bordinhas no topo e no final, além do texto estar muito colado no limite; usaremos o padding para driblar os dois problemas:
         </p>
-        <p>padding: 40px 20px; Pois, 40 no topo e no fim, e 20 nas laterais</p>
-        <p>Porque padding e não margin?</p>
-        <p>Pois margin é a margem apos o conteudo, e padding é a margem do conteudo em relação o limite</p>
-
+        <p>padding: 40px 20px; Pois, 40 no topo e no fim, e 20 nas laterais.</p>
+        <p>Por que padding e não margin?</p>
+        <p>Pois margin é a margem após o conteúdo, e padding é a margem do conteúdo em relação ao limite.</p>
 
         <h2>Acessibilidade</h2>
         <p>Para acessibilidade, tem padrão de:</p>
-        <p>
-            line-height: 1.5; /* 1.5 sem aquele px significa, 1.5x do valor atual, por exemeplo: a fonte que voce escolheu tem 16px, então sera 16px*1.5 */
-            letter-spacing: 0.12em; /* tamanho	do espaço entre	cada letra */
-            word-spacing: 0.16em;	/* tamanho do espaço entre cada palavra */</p>
-        <p>Mas é claro que isso vai depender da fonte e bom senso, verifique as diretrizes de acessibilidade.</p>
-
         
+        <div class="tela-programa">
+<pre><code><span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag">line-height</span>: <span class="tag-branco">1.5;</span> <span class="comment">/* 1.5 sem aquele px significa,
+         1.5x do valor atual, por exemplo: a fonte que você escolheu 
+         tem 16px, então será 16px*1.5 */</span>
+    <span class="tag">letter-spacing</span>: <span class="tag-branco">0.12em;</span> <span class="comment">/* tamanho do espaço entre cada letra */</span>
+    <span class="tag">word-spacing</span>: <span class="tag-branco">0.16em;</span>   <span class="comment">/* tamanho do espaço entre cada palavra */</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+        
+        <p>Mas é claro que isso vai depender da fonte e bom senso; verifique as diretrizes de acessibilidade.</p>
+    </div>
 </body>
 </html>
