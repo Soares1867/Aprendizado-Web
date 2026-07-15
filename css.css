@@ -19,10 +19,52 @@ body{
     line-height: 1.6;        /* Deixa o espaçamento entre as linhas confortável como o da extensão */
 }
 
-.container{
+.container {
     background-color: #f4f1ea;
     max-width: 800px; 
     margin: 0 auto;
     padding: 40px 20px;
 }
 
+.definicao {
+    padding: 25px 30px;
+    margin: 35px 0;
+    border-left: 5px solid #d48c55; /* Um laranja terracota sofisticado */
+    background-color: #fcf8f2; /* Um tom creme/papel antigo bem suave */
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
+
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444444;
+    font-style: italic;
+    margin: 0;
+    
+}
+
+.sintexe {
+    border: 1px dashed #f62100; /* Um laranja terracota sofisticado */
+    background-color: #f69a93; /* Um tom creme/papel antigo bem suave */ 
+    padding: 3px; 
+}
+
+.exemplo {
+    border: 1px dashed #00f625; /* Um laranja terracota sofisticado */
+    background-color: #d3ebcb; /* Um tom creme/papel antigo bem suave */ 
+    padding: 3px; 
+}
+
+.piscar {
+    font-weight: bold;
+    /* Aplica a animação: nome, duração (0.8s) e repetição infinita */
+    animation: piscar 0.8s infinite;
+}
+
+/* O "roteiro" da animação */
+@keyframes piscar {
+    0%, 100% {
+        opacity: 1; /* Totalmente visível no início e no fim */
+    }
+    50% {
+        opacity: 0; /* Invisível exatamente no meio do caminho */
+    }
+}
