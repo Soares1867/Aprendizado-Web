@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700;800&display=swap');
+
+body{
+    background-color: #000000;
+    font-family: 'Sora', sans-serif;
+    margin: 0;
+    
+}
+
+
+.container{
+    background-color: #000000;
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+
+
+
+
+
+header{
+    background-color: #000000;
+    border-bottom: 1px solid #c5bbbb;
+}
+
+
+.titulo-topo{
+    color: #ffffff;
+}
+
+.apresentacao{
+    color:#ffffff
+}
+
+.titulo-1{
+    font-family: 'Sora', sans-serif;
+    padding-left: 5px;
+    font-size: 50px;
+    font-weight: 800;          /* Deixa a fonte bem grossa e marcante */
+    letter-spacing: -0.03em;   /* Junta as letras de leve (segredo da referência) */
+    line-height: 1.1;          /* Evita que as linhas fiquem muito distantes */
+    
+/*DEGRADE PEGUE NO SITE: https://blog.cisne.dev/texto-com-degrade-em-css-igual-a-esse-titulo/ /*
+/*Inicio degrade*/
+  /* Primeiro passo: definir um degradê como fundo */
+  background-image: linear-gradient(to bottom, rgb(70, 6, 41), rgb(141, 62, 121), rgb(197, 115, 190));
+  
+  /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+  background-clip: text;
+  -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+  /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+  -webkit-text-fill-color: transparent;
+
+  /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+  color: black;
+/*Fim degrade*/
+/*
+Não esquecer de encinar isso ou colocar o codigo/site no seu site
+*/
+
+}
+
+.p1{
+    color:#db82cf;
+}
+
+/* Para os parágrafos normais (se quiser que fiquem mais suaves) */
+p {
+    font-weight: 400;          /* Peso normal para leitura */
+    color: #e0e0e0;            /* Um tom de branco ligeiramente acinzentado */
+}
+
+.p4{
+    color:#db82cf;
+}
+
+.quadrado{
+    border: 1px solid #BB01A1;
+    border-top: 10px solid #BB01A1;
+    background-color: #1E091F;
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin: 0 5px;
+    border-radius: 10%;
+    padding: 10px;
+}
+
+
+
+.titulo{
+    padding-left: 5px;
+    color: #ffffff;
+}
+
+.p-quadrado{
+    font-size: 15px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aprendizado WEB</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="aula2/aula2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AULA 2: HTML e CSS</h1>
+        
+        
+        
+        <h2>Processo de desenvolvimento de uma tela</h2>
+        <p>Para desenvolver seu projeto WEB muitos fatores devem ser analisado, como por exemplo o publico alvo,
+            para que assim seja escolhido a melhor abordagem para navegação em relação ao tom linguistico, visual, entre outro.
+        </p>
+        <p>Assim a primeira etapa do desenvolvimento web fica a cargo da area de User Experience Design (UX) ou Interaction Design (IxD), onde temos pessoas formadas em comunicação</p>
+        <p>Essas pessoas vão definir varias caracteristicas humana do projeto, defindo o conteduo do Design de Interação, Experiencia de Usuario e Usabilidade.
+            Assim, o mapa do site, esboço da visão, como as configurações.
+        </p>
+        <p>Esse esboço é chamado de wireframes, ou seja.</p>
+
+        <div class="definicao">
+            <h2>WIREFRAMES</h2>
+            <p>É o esboço da visão do projeto, baseado na User Experience Desing. E apartir dele que podemos construir nosso site, é depois dele que vem cor, fonte, etc.
+            </p>
+        </div>
+        //Imagem
+        <p>Agora que teos o wireframe, o designe grafico pode colocar imagens, cores, tipos, fundos, bordas. Esse trabalho é chamado de layout, ou seja:</p>
+        <div class="definicao">
+            <h2>Layout</h2>
+            <p>Imagens estaticas ja com o visual completo do site, basicamente oque fazemos no canva, a parte de programação entra depois do Layout feito.
+            </p>
+        </div>
+        //Imagem
+        <p>Agora com o layout, o programador front-end vai usar tecnologias para o programa, como HTML, CSS, JAVASCRIPT, ADOBE FLASH, etc. Obs: para interativida usamos bastante javascript,mas falaremos disso em outro momento </p>
+
+
+        <h2>HTML SEMANTICO</h2>
+        <p>Para entender isso, veremos dois casos a seguir:</p>
+        
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">body</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">div</span><span class="tag-branco">&gt;</span>
+        <span class="tag-branco">&lt;!--Conteudo Cabeçalho--&gt;</span>
+    <span class="tag-branco">&lt;/</span><span class="tag">div</span><span class="tag-branco">&gt;</span>
+
+    <span class="tag-branco">&lt;</span><span class="tag">div</span><span class="tag-branco">&gt;</span>
+        <span class="tag-branco">&lt;!--Conteudo Rodapé--&gt;</span>
+    <span class="tag-branco">&lt;/</span><span class="tag">div</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">body</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
+        <p>No caso acima temos uma div para o rodapé e uma para o cabeçalho, ao ler esse arquivo só descobrimos ter essa finalidade quando lemos o conteudo, talves quando lemos uma id/class espeficicando sua função,
+            agora veja o caso a seguir, onde o html5 cria uma nova tag, uma só para rodapé, e outra para cabeçalho </p>
+
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">body</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">header</span><span class="tag-branco">&gt;</span>
+        <span class="tag-branco">&lt;!--Conteudo Cabeçalho--&gt;</span>
+    <span class="tag-branco">&lt;/</span><span class="tag">header</span><span class="tag-branco">&gt;</span>
+
+    <span class="tag-branco">&lt;</span><span class="tag">footer</span><span class="tag-branco">&gt;</span>
+        <span class="tag-branco">&lt;!--Conteudo Rodapé--&gt;</span>
+    <span class="tag-branco">&lt;/</span><span class="tag">footer</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">body</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
+
+        <p>Agora, essa tag significa alguma coisa, não é algo generico, isso é chamado de semantica, ou seja:</p>
+        <div class="definicao">
+            <h2>SEMANTICA HTML</h2>
+            <p>É o significado que a tag da ao conteudo, saindo do generico e representando de fato algo</p>
+        </div>
+
+        <p>ALem disso, robôs de	 busca como o Google não leem de forma visual, então ele vai ler o codigo html, e para entender oque deve ser oque.
+            Semântica é	uma	importante técnica de SEO - Search Engine Optimization </p>
+
+</body>
+</html>
