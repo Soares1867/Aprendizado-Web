@@ -23,12 +23,32 @@ body{
 header{
     background-color: #000000;
     border-bottom: 1px solid #c5bbbb;
+    padding: 20px 0;
 }
+
 
 
 .titulo-topo{
     color: #ffffff;
+    display: inline;
+    position: relative;
 }
+
+nav{
+    display: inline;
+    position: absolute;
+    right: 20px;
+}
+
+nav ul {
+    list-style: none; /* Remove as bolinhas da lista */
+    display: flex;    /* Alinha os itens filhos (li) lado a lado */
+    gap: 15px;        /* Cria um espaço de 15px entre o Sobre e o Contato */
+}
+
+
+
+
 
 .apresentacao{
     color:#ffffff
