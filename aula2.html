@@ -75,6 +75,110 @@
 
         <p>ALem disso, robôs de	 busca como o Google não leem de forma visual, então ele vai ler o codigo html, e para entender oque deve ser oque.
             Semântica é	uma	importante técnica de SEO - Search Engine Optimization </p>
+        
+        
+        <h2>Pensando no HEADER</h2>
+        <p>Vimos então que o cabeçalho sera representado pela tag <code>&lt;header&gt;</code> semanticamente, agora veremos o conteúdo dele</p>
+        <p>Não é uma regra, mas muitas vezes vemos links, como: sobre, contatos, etc.</p>
+        <p>Podemos usar uma lista &lt;ul&gt; com &lt;li&gt; e para transformar essas listas em link usamos a tag <code>&lt;a&gt;</code></p>
+        <p>Assim esta bom, mas para melhorar essas lista &lt;ul&gt; podemos usar a tag <code>&lt;nav&gt;</code> para agrupar os links de navegação.</p>
+        <p>Novamente, nav visualmente não interfere, mas semanticamente, o navegador entende que oque estiver dentro dele é um agrupado de links para outros conteúdos.</p>
+        <p>Assim, o cabeçalho ficaria assim:</p>
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">header</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">nav</span><span class="tag-branco">&gt;</span>
+        <span class="tag-branco">&lt;</span><span class="tag">ul</span><span class="tag-branco">&gt;</span>
+            <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+                <span class="tag-branco">&lt;</span><span class="tag">a href="#"></span><span class="tag-branco">&gt;</span><span class="tag-branco">Sobre</span><span class="tag-branco">&lt;/</span><span class="tag">a</span><span class="tag-branco">&gt;</span>
+            <span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+            <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+                <span class="tag-branco">&lt;</span><span class="tag">a href="#"></span><span class="tag-branco">&gt;</span><span class="tag-branco">Contato</span><span class="tag-branco">&lt;/</span><span class="tag">a</span><span class="tag-branco">&gt;</span>
+            <span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+        <span class="tag-branco">&lt;/</span><span class="tag">ul</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;/</span><span class="tag">nav</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">header</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
+        <p>O # significa que o link aponta para uma âncora dentro da mesma página. O que significa é que o link vai rolar a página até encontrar o elemento com o id correspondente. No entanto, para que isso funcione, é necessário ter um elemento com o id correspondente na página. Dessa forma:</p>
+        <p><div class="exemplo">&lt;div id="sobre"&gt;Sobre&lt;/div&gt;</div></p>
+        <p>Mas podemos colocar o link para um pagina externa, ao inves de colocar #, basta especificar a URL completa</p>
+        <p>No cabeçalho usamos muitas vezes logo, que geralemente é uma imagem, é comum colocar essa imagem dentro de um h1, para que o navegador associe o titulo, que geralemente é o nome da empresa, com a imagem do logo, assim o navegador entende que a imagem é o logo da empresa, e não apenas uma imagem qualquer.</p>
+        <p>Ficando assim:</p>
+        <p><div class="exemplo">&lt;h1&gt;&lt;img src="logo.png" alt="Logo da Empresa"&gt;&lt;/h1&gt;</div></p>
 
+
+        <h2>Estilização com classes</h2>
+        <p>Ja vimos que para estilizar podemos usar o nome da tag, mas e se tiver mais de um nav para estilizar de formas diferentes?</p>
+        <p>Vimos que podemos usar id, então porque não usar classes?</p>
+        <p>Classes são mais flexiveis, pois podemos usar a mesma classe em varios elementos, e podemos usar varias classes em um elemento, ja o id é unico, ou seja, só pode ser usado uma vez na página. Ou seja, classe é reutilizavel, id é unico na pagina</p>
+
+
+        <h2>CSS RESET</h2>
+        <p>Quando não definimos algum aspecto do estilo do site, o navegador vai colocar um padrão, e que as vezes nãosai como nos esperavmos quebrando o layout.</p>
+        <p>Para resolver isso, podemos usar um CSS RESET, que consiste em zerar todos os estilos padrão do navegador.</p>
+        <p>Os de destaque são:</p>
+        <dl>
+            <dt>HTML5 BOILERPLATE</dt>
+            <dd>É um conjunto de arquivos HTML e CSSque ajudam a iniciar o desenvolvimento de um site ou aplicação web. Em seu arquivo style.css, encontramos um CSS RESET com diversas tecnicas.</dd>
+            
+            <dt>YUI CSS Reset</dt>
+            <dd>Criado por um front do Yahoo!, tem 3 arquivos, sendo o primeiro "Reset", que muda os vaores todos para o mesmo padrão, então a fonte do h1 e do small tambem terão o mesmo tamnaho, por exemplo.
+                O segundo arquivo se chama "Base", algumas margens e dimensãoes ficam padronizados.
+                O terceiro se chama Font, onde o tamanho dos tipos é definido.</dd>
+        </dl>
+
+        <h2>Block vs Inline</h2>
+        <p>As tag que são exibidas em bloco ocupam toda a largura disponível, enquanto as tags inline ocupam apenas o espaço necessário, permitindo, naturlmente, que outras coisas fiquem ao seu lado.</p>
+        <p>Exemplo de tags em bloco: &lt;div&gt;, &lt;h1&gt;, &lt;p&gt;</p>
+        <p>Exemplo de tags inline: &lt;span&gt;, &lt;a&gt;, &lt;img&gt;</p>
+        <p>As tags inline não podem ter largura e altura definidas, enquanto as tags em bloco podem ter largura e altura definidas. As tags inline não podem ter margens e preenchimentos definidos, enquanto as tags em bloco podem ter margens e preenchimentos definidos. As tags inline não podem ter bordas definidas, enquanto as tags em bloco podem ter bordas definidas.</p>
+        <p>Existe uma propriedade chamada "Display" que permite definir a estrategia de exibição</p>
+        <p>Dessa forma, definimos o display:block; caso queiramos que o elemento se comporto como bloco.
+            Ou display:inline; caso queiramos que o elemento se comporto como inline.
+        </p>
+
+
+        <h2>Position: Static, Relative, Absolute</h2>
+        <p>A propriedade Position, determina o modo de posicionamento dos elementos na página.</p>
+        <h3>Static</h3>
+        <p>Valor padrão. O elemento permanece no seu lugar original, ou seja, de renderização da pagina</p>
+        <p>Se parssarmos valores de coordenadas, ele não vai se mover.</p>
+
+        <h3>Relative</h3>
+        <p>O elemento é posicionado em relação à sua posição original. Ou seja, passamos valores e ela se move.</p>
+        <p>Exemplo:</p>
+        <div class="tela-programa">
+<pre><code><span class="tag">.logotipo</span><span class="tag-branco">{</span>
+    <span class="tag">position</span><span class="tag-branco">:</span> <span class="valor">relative</span><span class="tag-branco">;</span>
+    <span class="tag">top</span><span class="tag-branco">:</span> <span class="valor">10px</span><span class="tag-branco">;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+        <p>O elemento se move 10px para baixo, mas o espaço que ele ocupava originalmente ainda é reservado.</p>
+
+        <h3>Absolute</h3>
+        <p>O elemento é posicionado em relação ao seu elemento pai mais próximo que tenha uma posição definida diferente de static. E vai obedece as coordenas de acordo com o tamanho total do elemento pai</p>
+        <p>E  se não tiver elemento diferente de static para ele ter como referencia?</p>
+        <p>Então a referencia vai ser a porção visual da pagina.</p>
+        <p>Observação: A referencia é em relação a posição original do elemento de referência.</p>
+
+        <h3>Fixed</h3>
+        <p>Sempre terá como referencia a porção visivel do documento, e mantem-se naquela posição até mesmo quando tem rolagem na tela.</p>
+        //pag. 69-71: Pulada
+        <p>Elaboramos cbeçalho, mas e a area central e rodapé?</p>
+        <p>Faremos agora, vamos primeiramente falar da area central.</p>
+
+        <h2>Formulario</h2>
+        <p>Usamos form para indicar que estamos capturando dados do usuarios</p>
+        <p>E dentro dessa sinalização semantica, usamos input e button, dentre varias outras.</p>
+        <p>O input é usado para criar campos de entrada de dados, enquanto o button é usado para criar botões.</p>
+        <p>No input temos que colocar o atributo "type" com o valor "text", "email", "password", "search" entre outros.</p>
+        <p>A pessoa digita oque se pede e depois envia apertando o botão.</p>
+        <p>Dessa forma:</p>
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">form</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">input type ="</span><span class="tag-branco">search</search></span><span class="tag">" placeholder=" </span><span class="tag-branco">Digite seu nome</span><span class="tag">"</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">button</span><span class="tag-branco">&gt;</span>Buscar<span class="tag-branco">&lt;/</span><span class="tag">button</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">form</span><span class="tag-branco">&gt;</span>
+        </div>
+        <p>placehold significa "texto de placeholder", que é o texto que aparece dentro do campo de entrada antes do usuário digitar algo.</p>
 </body>
 </html>
