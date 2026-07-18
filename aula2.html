@@ -180,5 +180,102 @@
 <span class="tag-branco">&lt;/</span><span class="tag">form</span><span class="tag-branco">&gt;</span>
         </div>
         <p>placehold significa "texto de placeholder", que é o texto que aparece dentro do campo de entrada antes do usuário digitar algo.</p>
+
+        <h2>Posicionamento com FLOAT e CLEAR</h2>
+        <p>Lembra que falamos do float?</p>
+        <p>Relembrando: o float serve para fazer um bloco flutuar e ficar a esquerda ou direita de um outro elemento, e não abaixo dele.</p>
+        <p>O clear serve para ser aplicado nos elementos que vem depois do eemento que esta flutuando. Para que ele não fique flutuando tambem.</p>
+        <p>Ou seja, ele diz para, apartir daquele elemento, parar a flutuação.</p>
+        <p>Voce deve indicar que lado voce quer que pare de flutuar, com o left e right.</p>
+        <p>Dessa forma:</p>
+        <div class="tela-programa">
+<pre><code><span class="tag">.conteudo</span><span class="tag-branco">{</span>
+    <span class="tag">float</span><span class="tag-branco">:</span> <span class="tag-branco">left</span><span class="tag-branco">;</span>
+<span class="tag-branco">}</span>
+<span class="tag">.rodape</span><span class="tag-branco">{</span>
+    <span class="tag">clear</span><span class="tag-branco">:</span> <span class="tag-branco">left</span><span class="tag-branco">;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h2>Decoração de Texto com CSS</h2>
+        <p>O CSS permite que você decore o texto de várias maneiras.</p>
+        <dl>
+            <dt>Transformar Texto (text-transform)</dt>
+            <dd>Realiza transformações no texto, como converter para maiúsculas ou minúsculas.</dd>
+            <ul>
+                <li>uppercase: transforma todo o texto em maiúsculas.</li>
+                <li>lowercase: transforma todo o texto em minúsculas.</li>
+                <li>capitalize: transforma a primeira letra de cada palavra em maiúscula.</li>
+            </ul>
+            <dt>Decoração de texto</dt>
+            <dd>Permite aplicar estilos de decoração ao texto, como sublinhado, itálico e negrito.</dd>
+            <ul>
+                <li>underline: aplica um sublinhado ao texto.</li>
+                <li>overline: aplica uma linha acima do texto.</li>
+                <li>line-through: aplica uma linha atravessando o texto.</li>
+                <li>none: remove qualquer decoração de texto.</li>
+            </ul>
+            <dt>Espaçamento entre letras (letter-spacing)</dt>
+            <dd>Define o espaçamento entre as letras do texto.</dd>
+            <ul>
+                <li>normal: utiliza o espaçamento padrão entre as letras.</li>
+                <li>valor em px, em, rem, etc.: define um espaçamento específico entre as letras.</li>
+            </ul>
+            <dt>Espaçamento entre palavras (word-spacing)</dt>
+            <dd>Define o espaçamento entre as palavras do texto.</dd>
+            <ul>
+                <li>normal: utiliza o espaçamento padrão entre as palavras.</li>
+                <li>valor em px, em, rem, etc.: define um espaçamento específico entre as palavras.</li>
+            </ul>
+            <dt>Altura da linha (line-height)</dt>
+            <dd>Define a altura da linha do texto, ou seja, o espaçamento vertical entre as linhas.</dd>
+            <ul>
+                <li>normal: utiliza a altura de linha padrão.</li>
+                <li>valor em px, em, rem, etc.: define uma altura de linha específica.</li>
+            </ul>
+        </dl>
+
+        
+        <h2>Cascata e Herança no CSS</h2>
+        <p>Algumas propriedades de elementos pais, quando alteradas, podem afetar os filhos.</p>
+        <p>Por exemplo, se alterarmos a cor do texto de um elemento pai, todos os elementos filhos herdarão essa cor, a menos que tenham uma cor específica definida.</p>
+        <p>As propriedades que não são aplicadas em cascatas são alequelas que afetam diretamente a caixa (box) do elemento.</p>
+        <p>Exemplos de propriedades que não são aplicadas em cascata incluem:</p>
+        <ul>
+            <li>width</li>
+            <li>height</li>
+            <li>margin</li>
+            <li>padding</li>
+            <li>border</li>
+        </ul>
+        <p>Por exemplo:</p>
+        <div class="tela-programa">
+<pre><code><span class="tag">h1</span><span class="tag-branco">{</span>
+    <span class="tag">padding-left</span><span class="tag-branco">: 40 px;</span>
+<span class="tag-branco">}</span>
+<span class="tag">#pai</span><span class="tag-branco">{</span>
+    <span class="tag">padding-left</span><span class="tag-branco">: 0;</span>
+<span class="tag-branco">}</span></code></pre>  
+        </div>
+        <p>Nesse exemplo o padding do h1 não sera sobrescrito pelo valor do elemento pai, ou seja, mantera o valor de 40 px</p>
+
+
+        <h2>O  valor inherit</h2>
+        <p>Mas e se quisermos que um elemento herde o valor de uma propriedade de seu pai? Utilizamos o valor <strong>inherit</strong>.</p>
+        <p>Por exemplo:</p>
+        <div class="tela-programa">
+<pre><code><span class="tag">img</span><span class="tag-branco">{</span>
+    <span class="tag">width</span><span class="tag-branco">: inherit;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>  
+        <p>O valor inherit diz ao elemento para usar o mesmo valor presente no elemento pai.</p>
+
+
+        <h2>Display Inline-Block</h2>
+        <p>Vamos supor queremos fazer uma lista com produtos lado a lado. Sabemos que &lt;li&gt; possui a propriedade display:block por padrão.</p>
+        <p>Então trocaremos para o display:inline; mas lembra-se  tambem que inline não é permitido mudar o tamanho da margem etc</p>
+        <p>Para voce ter esse comportamento, utilizamos o display:inline-block;</p>
+
+
 </body>
 </html>

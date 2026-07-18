@@ -35,9 +35,10 @@ header{
 }
 
 nav{
-    display: inline;
+    display: inline-block;
     position: absolute;
     right: 20px;
+    font-size: 18px;
 }
 
 nav ul {
