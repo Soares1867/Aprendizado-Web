@@ -6,6 +6,248 @@
     <link rel="stylesheet" href="aula3/aula3.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>AULA 3: CSS avançado</h1>
+        <p>Com o avanço do html e css, foi possivel fazer coisas que antes eram impossiveis, que antes eram feitas com imagem ou até com o uso de javascript,
+            por isso, veremos algumas das tecnicas mais avançadas de css</p>
+        
+        
+        
+        <h2>Seletores avançados</h2>
+        <p>Vimos seletores mais avançdos como o de atributo, mas agora veremos outros</p>
+
+        <h3>Seletores irmãos</h3>
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">article</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">h1</span><span class="tag-branco">&gt;</span><span class="tag-branco">Titulo</span><span class="tag-branco">&lt;/</span><span class="tag">h1</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">p</span><span class="tag-branco">&gt;</span><span class="tag-branco">Inicio</span><span class="tag-branco">&lt;/</span><span class="tag">p</span><span class="tag-branco">&gt;</span>
+
+
+    <span class="tag-branco">&lt;</span><span class="tag">h2</span><span class="tag-branco">&gt;</span><span class="tag-branco">Subtitulo</span><span class="tag-branco">&lt;/</span><span class="tag">h2</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">p</span><span class="tag-branco">&gt;</span><span class="tag-branco">Texto</span><span class="tag-branco">&lt;/</span><span class="tag">p</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">p</span><span class="tag-branco">&gt;</span><span class="tag-branco">Mais texto</span><span class="tag-branco">&lt;/</span><span class="tag">p</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">article</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
+
+        <p>Se quisermos estiliza todos os paragrafos apos o subtitulo?</p>
+        <p>Usamos o seletor de irmão (siblings) (~). </p>
+        <p>Ele serve para selecionar elementos que são irmãos de um elemento específico.</p>
+        <p>Ficando:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">h2</span><span class="tag-braco">~</span><span class="tag">p</span><span class="tag-braco">{</span>
+    <span class="tag-braco">color: red;</span>
+<span class="tag-braco">}</span></code></pre>  
+        </div>
+
+        <h3>Seletores irmãos adjacente</h3>
+        <p>O seletor de irmãos adjacente (+) seleciona o elemento imediatamente seguinte ao elemento especificado.</p>
+        <p>Ficando:</p>
+        <div class="tela-programa">
+<pre><code><span class="tag">h2</span><span class="tag-braco">+</span><span class="tag">p</span><span class="tag-braco">{</span>
+    <span class="tag-braco">color: red;</span>
+<span class="tag-braco">}</span></code></pre>
+        </div>
+        <p>Assim apenas o "texto" é aplicado a cor red, o "mais texto" não será afetado.</p>
+
+        <h2>Seletor de filho direto</h2>
+        <p>O seletor de filho direto (&gt;) serve para selecionar elementos que estão imediatamente dentro de outro, sem considerar os "netos" ou elementos em níveis mais profundos da estrutura.</p>
+        <p>Imagine o seguinte cenário em HTML:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">article</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">h1</span><span class="tag-branco">&gt;</span><span class="tag-branco">Título principal</span><span class="tag-branco">&lt;/</span><span class="tag">h1</span><span class="tag-branco">&gt;</span>
+
+    <span class="tag-branco">&lt;</span><span class="tag">section</span><span class="tag-branco">&gt;</span>
+        <span class="tag-branco">&lt;</span><span class="tag">h1</span><span class="tag-branco">&gt;</span><span class="tag-branco">Título da seção</span><span class="tag-branco">&lt;/</span><span class="tag">h1</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;/</span><span class="tag">section</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">article</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
+
+        <p>Se você quiser alterar a cor apenas do título principal, usar um seletor de hierarquia comum (com espaço) não vai funcionar, pois ele pintaria ambos os títulos de azul:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="comment">/* Errado: isso vai selecionar TODOS os h1 dentro do article */</span>
+<span class="tag">article</span> <span class="tag">h1</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">color: blue;</span>
+<span class="tag-braco">}</span></code></pre>
+        </div>
+
+        <p>Para resolver isso, usamos o operador maior que (&gt;). Ele garante que apenas o h1 que é filho imediato do article receba o estilo:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="comment">/* Correto: seleciona apenas o h1 que é filho direto */</span>
+<span class="tag">article</span> <span class="tag-braco">&gt;</span> <span class="tag">h1</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">color: blue;</span>
+<span class="tag-braco">}</span></code></pre>
+        </div>
+
+        <h2>Seletor de negação</h2>
+        <p>O seletor de negação (:not) serve para aplicar estilos a elementos que <strong>não</strong> possuem uma determinada característica, como uma classe ou um ID específico.</p>
+        <p>Considere esta lista de parágrafos:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">p</span><span class="tag-branco">&gt;</span><span class="tag-branco">Texto</span><span class="tag-branco">&lt;/</span><span class="tag">p</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;</span><span class="tag">p</span><span class="tag-branco">&gt;</span><span class="tag-branco">Outro texto</span><span class="tag-branco">&lt;/</span><span class="tag">p</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;</span><span class="tag">p</span> <span class="attr">class</span><span class="tag-branco">=</span><span class="string">"especial"</span><span class="tag-branco">&gt;</span><span class="tag-branco">Texto especial</span><span class="tag-branco">&lt;/</span><span class="tag">p</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;</span><span class="tag">p</span><span class="tag-branco">&gt;</span><span class="tag-branco">Mais texto</span><span class="tag-branco">&lt;/</span><span class="tag">p</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
+
+        <p>Se a intenção for deixar todos os parágrafos cinzas, exceto aquele que foi marcado com a classe "especial", usamos a pseudo-classe :not() passando o alvo da exceção entre os parênteses:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="comment">/* Seleciona todos os parágrafos que NÃO têm a classe .especial */</span>
+<span class="tag">p</span><span class="tag-braco">:not(</span><span class="class">.especial</span><span class="tag-braco">)</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">color: gray;</span>
+<span class="tag-braco">}</span></code></pre>
+        </div>
+
+
+
+
+        <h2>Pseudo-classes</h2>
+        <p>Imagine que temos uma lista simples no HTML e queremos estilizar elementos específicos dela — por exemplo, deixar o primeiro item vermelho e o último azul:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">ul</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span><span class="tag-branco">Primeiro item</span><span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span><span class="tag-branco">Segundo item</span><span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span><span class="tag-branco">Terceiro item</span><span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+    <span class="tag-branco">&lt;</span><span class="tag">li</span><span class="tag-branco">&gt;</span><span class="tag-branco">Quarto item</span><span class="tag-branco">&lt;/</span><span class="tag">li</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;/</span><span class="tag">ul</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
+
+        <p>Uma solução comum seria adicionar classes manuais no HTML. Porém, isso exige alteração estrutural e manutenção constante se a ordem dos itens mudar. Para resolver isso de forma inteligente, o CSS oferece as <strong>pseudo-classes</strong>.</p>
+        <p>Elas funcionam como classes pré-definidas pelo próprio navegador, permitindo selecionar elementos com base em sua posição ou estado sem mexer no HTML. Para diferenciá-las de uma classe comum, usamos o caractere de dois pontos (:) em vez do ponto.</p>
+
+        <div class="tela-programa">
+<pre><code><span class="comment">/* Seleciona o primeiro li filho */</span>
+<span class="tag">li</span><span class="tag-braco">:first-child</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">color: red;</span>
+<span class="tag-braco">}</span>
+
+<span class="comment">/* Seleciona o último li filho */</span>
+<span class="tag">li</span><span class="tag-braco">:last-child</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">color: blue;</span>
+<span class="tag-braco">}</span></code></pre>
+        </div>
+
+        <h3>O seletor nth-child</h3>
+        <p>Para um controle ainda mais flexível, utilizamos o seletor <code>:nth-child()</code>, que recebe um índice ou uma expressão matemática entre os parênteses para definir quais elementos serão afetados.</p>
+        <p>Podemos selecionar um elemento exato informando o seu número:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="comment">/* Seleciona especificamente o terceiro item */</span>
+<span class="tag">li</span><span class="tag-braco">:nth-child(3)</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">color: yellow;</span>
+<span class="tag-braco">}</span></code></pre>
+        </div>
+
+        <p>Também é possível criar um padrão alternado (como uma lista zebrada) utilizando expressões aritméticas para atingir índices pares e ímpares:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="comment">/* Seleciona os elementos pares (2, 4, 6...) */</span>
+<span class="tag">li</span><span class="tag-braco">:nth-child(2n)</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">color: green;</span>
+<span class="tag-braco">}</span>
+
+<span class="comment">/* Seleciona os elementos ímpares (1, 3, 5...) */</span>
+<span class="tag">li</span><span class="tag-braco">:nth-child(2n+1)</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">color: blue;</span>
+<span class="tag-braco">}</span></code></pre>
+        </div>
+
+        <h2>Pseudo-classes de estado</h2>
+        <p>Outra utilidade importante das pseudo-classes é reagir às ações do usuário em tempo real, capturando o estado atual de um elemento (como passar o mouse por cima ou clicar) de forma nativa, sem depender de scripts externos.</p>
+        <p>A pseudo-classe <code>:hover</code> é acionada no exato momento em que o ponteiro do mouse é posicionado sobre o elemento:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="comment">/* Altera o fundo quando o usuário passa o mouse pelo link */</span>
+<span class="tag">a</span><span class="tag-braco">:hover</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">background-color: #FF00FF;</span>
+<span class="tag-braco">}</span></code></pre>
+        </div>
+
+        <p>Especificamente para links (âncoras), existem outras pseudo-classes fundamentais para gerenciar o comportamento visual de navegação:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="comment">/* Seleciona links padrão que possuem o atributo href */</span>
+<span class="tag">a</span><span class="tag-braco">:link</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">background-color: #FF0000;</span>
+<span class="tag-braco">}</span>
+
+<span class="comment">/* Seleciona links que o usuário já visitou no histórico */</span>
+<span class="tag">a</span><span class="tag-braco">:visited</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">background-color: #00FF00;</span>
+<span class="tag-braco">}</span>
+
+<span class="comment">/* Seleciona o link durante o clique ativo do mouse */</span>
+<span class="tag">a</span><span class="tag-braco">:active</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">background-color: #0000FF;</span>
+<span class="tag-braco">}</span></code></pre>
+        </div>
+
+        <h2>Pseudo-elementos</h2>
+        <p>Enquanto as pseudo-classes selecionam elementos que já existem com base em sua posição ou estado, os <strong>pseudo-elementos</strong> permitem estilizar partes específicas do conteúdo de um elemento que sequer possuem uma tag própria no HTML (ou até mesmo gerar novos conteúdos visuais).</p>
+        <p>Para diferenciar visualmente os pseudo-elementos das pseudo-classes no CSS moderno, utilizamos a sintaxe de dois pontos duplos (::).</p>
+        <p>Imagine que você queira criar um efeito de revista, aumentando o tamanho apenas da primeira letra de um parágrafo comum:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">p</span><span class="tag-branco">&gt;</span><span class="tag-branco">A Caelum tem os melhores cursos!</span><span class="tag-branco">&lt;/</span><span class="tag">p</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
+
+        <p>Em vez de poluir o HTML envolvendo a letra "A" com uma tag desnecessária, usamos o pseudo-elemento <code>::first-letter</code> diretamente no CSS:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="comment">/* Seleciona e estiliza apenas a primeira letra do parágrafo */</span>
+<span class="tag">p</span><span class="tag-braco">::first-letter</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">font-size: 200%;</span>
+<span class="tag-braco">}</span></code></pre>
+        </div>
+
+        <p>Da mesma forma, se precisarmos aplicar um estilo exclusivo para a primeira linha de um bloco de texto (independentemente do tamanho da tela do usuário), podemos usar o <code>::first-line</code>:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="comment">/* Deixa apenas a primeira linha do parágrafo em itálico */</span>
+<span class="tag">p</span><span class="tag-braco">::first-line</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">font-style: italic;</span>
+<span class="tag-braco">}</span></code></pre>
+        </div>
+
+        <h2>Inserindo novos conteúdos via CSS</h2>
+        <p>Existem dois pseudo-elementos muito poderosos chamados <code>::before</code> e <code>::after</code>. Eles servem para injetar conteúdo puramente estético antes ou depois do conteúdo real de um elemento, mantendo o HTML limpo e focado apenas no significado do texto (sem afetar leitores de tela ou mecanismos de busca).</p>
+        <p>Considere esta lista simples de links:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">&lt;</span><span class="tag">a</span> <span class="attr">href</span><span class="tag-branco">=</span><span class="string">"#"</span><span class="tag-branco">&gt;</span><span class="tag-branco">Link 1</span><span class="tag-branco">&lt;/</span><span class="tag">a</span><span class="tag-branco">&gt;</span>
+<span class="tag-branco">&lt;</span><span class="tag">a</span> <span class="attr">href</span><span class="tag-branco">=</span><span class="string">"#"</span><span class="tag-branco">&gt;</span><span class="tag-branco">Link 2</span><span class="tag-branco">&lt;/</span><span class="tag">a</span><span class="tag-branco">&gt;</span></code></pre>
+        </div>
+
+        <p>Se quisermos cercar esses links com colchetes apenas por uma escolha de design, usamos a propriedade <code>content</code> dentro dos pseudo-elementos:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="comment">/* Adiciona um colchete antes do texto do link */</span>
+<span class="tag">a</span><span class="tag-braco">::before</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">content: '[ ';</span>
+<span class="tag-braco">}</span>
+
+<span class="comment">/* Adiciona um colchete depois do texto do link */</span>
+<span class="tag">a</span><span class="tag-braco">::after</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">content: ' ]';</span>
+<span class="tag-braco">}</span></code></pre>
+        </div>
+
+        <p>Podemos ir além e combinar pseudo-elementos com seletores de atributo. Por exemplo, para identificar de forma automática e visual todos os links externos da página que começam com "http://", adicionando o aviso "(externo)" após o texto deles:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="comment">/* Identifica links externos e insere um aviso ao final */</span>
+<span class="tag">a</span><span class="tag-braco">[href^=</span><span class="string">"http://"</span><span class="tag-braco">]</span><span class="tag-braco">::after</span> <span class="tag-braco">{</span>
+    <span class="tag-braco">content: ' (externo)';</span>
+<span class="tag-braco">}</span></code></pre>
+        </div>
+
+
+
+
 </body>
 </html>
