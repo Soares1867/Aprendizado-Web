@@ -35,18 +35,18 @@
         <p>Ficando:</p>
 
         <div class="tela-programa">
-<pre><code><span class="tag">h2</span><span class="tag-braco">~</span><span class="tag">p</span><span class="tag-braco">{</span>
-    <span class="tag-braco">color: red;</span>
-<span class="tag-braco">}</span></code></pre>  
+<pre><code><span class="tag">h2</span><span class="tag-branco">~</span><span class="tag">p</span><span class="tag-branco">{</span>
+    <span class="tag-branco">color: red;</span>
+<span class="tag-branco">}</span></code></pre>  
         </div>
 
         <h3>Seletores irmãos adjacente</h3>
         <p>O seletor de irmãos adjacente (+) seleciona o elemento imediatamente seguinte ao elemento especificado.</p>
         <p>Ficando:</p>
         <div class="tela-programa">
-<pre><code><span class="tag">h2</span><span class="tag-braco">+</span><span class="tag">p</span><span class="tag-braco">{</span>
-    <span class="tag-braco">color: red;</span>
-<span class="tag-braco">}</span></code></pre>
+<pre><code><span class="tag">h2</span><span class="tag-branco">+</span><span class="tag">p</span><span class="tag-branco">{</span>
+    <span class="tag-branco">color: red;</span>
+<span class="tag-branco">}</span></code></pre>
         </div>
         <p>Assim apenas o "texto" é aplicado a cor red, o "mais texto" não será afetado.</p>
 
@@ -67,19 +67,19 @@
         <p>Se você quiser alterar a cor apenas do título principal, usar um seletor de hierarquia comum (com espaço) não vai funcionar, pois ele pintaria ambos os títulos de azul:</p>
 
         <div class="tela-programa">
-<pre><code><span class="comment">/* Errado: isso vai selecionar TODOS os h1 dentro do article */</span>
-<span class="tag">article</span> <span class="tag">h1</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">color: blue;</span>
-<span class="tag-braco">}</span></code></pre>
+<pre><code><span class="tag-branco">/* Errado: isso vai selecionar TODOS os h1 dentro do article */</span>
+<span class="tag">article</span> <span class="tag">h1</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">color: blue;</span>
+<span class="tag-branco">}</span></code></pre>
         </div>
 
         <p>Para resolver isso, usamos o operador maior que (&gt;). Ele garante que apenas o h1 que é filho imediato do article receba o estilo:</p>
 
         <div class="tela-programa">
-<pre><code><span class="comment">/* Correto: seleciona apenas o h1 que é filho direto */</span>
-<span class="tag">article</span> <span class="tag-braco">&gt;</span> <span class="tag">h1</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">color: blue;</span>
-<span class="tag-braco">}</span></code></pre>
+<pre><code><span class="tag-branco">/* Correto: seleciona apenas o h1 que é filho direto */</span>
+<span class="tag">article</span> <span class="tag-branco">&gt;</span> <span class="tag">h1</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">color: blue;</span>
+<span class="tag-branco">}</span></code></pre>
         </div>
 
         <h2>Seletor de negação</h2>
@@ -96,10 +96,10 @@
         <p>Se a intenção for deixar todos os parágrafos cinzas, exceto aquele que foi marcado com a classe "especial", usamos a pseudo-classe :not() passando o alvo da exceção entre os parênteses:</p>
 
         <div class="tela-programa">
-<pre><code><span class="comment">/* Seleciona todos os parágrafos que NÃO têm a classe .especial */</span>
-<span class="tag">p</span><span class="tag-braco">:not(</span><span class="class">.especial</span><span class="tag-braco">)</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">color: gray;</span>
-<span class="tag-braco">}</span></code></pre>
+<pre><code><span class="tag-branco">/* Seleciona todos os parágrafos que NÃO têm a classe .especial */</span>
+<span class="tag">p</span><span class="tag-branco">:not(</span><span class="tag">.especial</span><span class="tag-branco">)</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">color: gray;</span>
+<span class="tag-branco">}</span></code></pre>
         </div>
 
 
@@ -121,15 +121,15 @@
         <p>Elas funcionam como classes pré-definidas pelo próprio navegador, permitindo selecionar elementos com base em sua posição ou estado sem mexer no HTML. Para diferenciá-las de uma classe comum, usamos o caractere de dois pontos (:) em vez do ponto.</p>
 
         <div class="tela-programa">
-<pre><code><span class="comment">/* Seleciona o primeiro li filho */</span>
-<span class="tag">li</span><span class="tag-braco">:first-child</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">color: red;</span>
-<span class="tag-braco">}</span>
+<pre><code><span class="tag-branco">/* Seleciona o primeiro li filho */</span>
+<span class="tag">li</span><span class="tag-branco">:first-child</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">color: red;</span>
+<span class="tag-branco">}</span>
 
-<span class="comment">/* Seleciona o último li filho */</span>
-<span class="tag">li</span><span class="tag-braco">:last-child</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">color: blue;</span>
-<span class="tag-braco">}</span></code></pre>
+<span class="tag-branco">/* Seleciona o último li filho */</span>
+<span class="tag">li</span><span class="tag-branco">:last-child</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">color: blue;</span>
+<span class="tag-branco">}</span></code></pre>
         </div>
 
         <h3>O seletor nth-child</h3>
@@ -137,24 +137,24 @@
         <p>Podemos selecionar um elemento exato informando o seu número:</p>
 
         <div class="tela-programa">
-<pre><code><span class="comment">/* Seleciona especificamente o terceiro item */</span>
-<span class="tag">li</span><span class="tag-braco">:nth-child(3)</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">color: yellow;</span>
-<span class="tag-braco">}</span></code></pre>
+<pre><code><span class="tag-branco">/* Seleciona especificamente o terceiro item */</span>
+<span class="tag">li</span><span class="tag-branco">:nth-child(3)</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">color: yellow;</span>
+<span class="tag-branco">}</span></code></pre>
         </div>
 
         <p>Também é possível criar um padrão alternado (como uma lista zebrada) utilizando expressões aritméticas para atingir índices pares e ímpares:</p>
 
         <div class="tela-programa">
-<pre><code><span class="comment">/* Seleciona os elementos pares (2, 4, 6...) */</span>
-<span class="tag">li</span><span class="tag-braco">:nth-child(2n)</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">color: green;</span>
-<span class="tag-braco">}</span>
+<pre><code><span class="tag-branco">/* Seleciona os elementos pares (2, 4, 6...) */</span>
+<span class="tag">li</span><span class="tag-branco">:nth-child(2n)</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">color: green;</span>
+<span class="tag-branco">}</span>
 
-<span class="comment">/* Seleciona os elementos ímpares (1, 3, 5...) */</span>
-<span class="tag">li</span><span class="tag-braco">:nth-child(2n+1)</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">color: blue;</span>
-<span class="tag-braco">}</span></code></pre>
+<span class="tag-branco">/* Seleciona os elementos ímpares (1, 3, 5...) */</span>
+<span class="tag">li</span><span class="tag-branco">:nth-child(2n+1)</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">color: blue;</span>
+<span class="tag-branco">}</span></code></pre>
         </div>
 
         <h2>Pseudo-classes de estado</h2>
@@ -162,29 +162,29 @@
         <p>A pseudo-classe <code>:hover</code> é acionada no exato momento em que o ponteiro do mouse é posicionado sobre o elemento:</p>
 
         <div class="tela-programa">
-<pre><code><span class="comment">/* Altera o fundo quando o usuário passa o mouse pelo link */</span>
-<span class="tag">a</span><span class="tag-braco">:hover</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">background-color: #FF00FF;</span>
-<span class="tag-braco">}</span></code></pre>
+<pre><code><span class="tag-branco">/* Altera o fundo quando o usuário passa o mouse pelo link */</span>
+<span class="tag">a</span><span class="tag-branco">:hover</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">background-color: #FF00FF;</span>
+<span class="tag-branco">}</span></code></pre>
         </div>
 
         <p>Especificamente para links (âncoras), existem outras pseudo-classes fundamentais para gerenciar o comportamento visual de navegação:</p>
 
         <div class="tela-programa">
-<pre><code><span class="comment">/* Seleciona links padrão que possuem o atributo href */</span>
-<span class="tag">a</span><span class="tag-braco">:link</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">background-color: #FF0000;</span>
-<span class="tag-braco">}</span>
+<pre><code><span class="tag-branco">/* Seleciona links padrão que possuem o atributo href */</span>
+<span class="tag">a</span><span class="tag-branco">:link</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">background-color: #FF0000;</span>
+<span class="tag-branco">}</span>
 
-<span class="comment">/* Seleciona links que o usuário já visitou no histórico */</span>
-<span class="tag">a</span><span class="tag-braco">:visited</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">background-color: #00FF00;</span>
-<span class="tag-braco">}</span>
+<span class="tag-branco">/* Seleciona links que o usuário já visitou no histórico */</span>
+<span class="tag">a</span><span class="tag-branco">:visited</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">background-color: #00FF00;</span>
+<span class="tag-branco">}</span>
 
-<span class="comment">/* Seleciona o link durante o clique ativo do mouse */</span>
-<span class="tag">a</span><span class="tag-braco">:active</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">background-color: #0000FF;</span>
-<span class="tag-braco">}</span></code></pre>
+<span class="tag-branco">/* Seleciona o link durante o clique ativo do mouse */</span>
+<span class="tag">a</span><span class="tag-branco">:active</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">background-color: #0000FF;</span>
+<span class="tag-branco">}</span></code></pre>
         </div>
 
         <h2>Pseudo-elementos</h2>
@@ -199,19 +199,19 @@
         <p>Em vez de poluir o HTML envolvendo a letra "A" com uma tag desnecessária, usamos o pseudo-elemento <code>::first-letter</code> diretamente no CSS:</p>
 
         <div class="tela-programa">
-<pre><code><span class="comment">/* Seleciona e estiliza apenas a primeira letra do parágrafo */</span>
-<span class="tag">p</span><span class="tag-braco">::first-letter</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">font-size: 200%;</span>
-<span class="tag-braco">}</span></code></pre>
+<pre><code><span class="tag-branco">/* Seleciona e estiliza apenas a primeira letra do parágrafo */</span>
+<span class="tag">p</span><span class="tag-branco">::first-letter</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">font-size: 200%;</span>
+<span class="tag-branco">}</span></code></pre>
         </div>
 
         <p>Da mesma forma, se precisarmos aplicar um estilo exclusivo para a primeira linha de um bloco de texto (independentemente do tamanho da tela do usuário), podemos usar o <code>::first-line</code>:</p>
 
         <div class="tela-programa">
-<pre><code><span class="comment">/* Deixa apenas a primeira linha do parágrafo em itálico */</span>
-<span class="tag">p</span><span class="tag-braco">::first-line</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">font-style: italic;</span>
-<span class="tag-braco">}</span></code></pre>
+<pre><code><span class="tag-branco">/* Deixa apenas a primeira linha do parágrafo em itálico */</span>
+<span class="tag">p</span><span class="tag-branco">::first-line</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">font-style: italic;</span>
+<span class="tag-branco">}</span></code></pre>
         </div>
 
         <h2>Inserindo novos conteúdos via CSS</h2>
@@ -226,28 +226,496 @@
         <p>Se quisermos cercar esses links com colchetes apenas por uma escolha de design, usamos a propriedade <code>content</code> dentro dos pseudo-elementos:</p>
 
         <div class="tela-programa">
-<pre><code><span class="comment">/* Adiciona um colchete antes do texto do link */</span>
-<span class="tag">a</span><span class="tag-braco">::before</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">content: '[ ';</span>
-<span class="tag-braco">}</span>
+<pre><code><span class="tag-branco">/* Adiciona um colchete antes do texto do link */</span>
+<span class="tag">a</span><span class="tag-branco">::before</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">content: '[ ';</span>
+<span class="tag-branco">}</span>
 
-<span class="comment">/* Adiciona um colchete depois do texto do link */</span>
-<span class="tag">a</span><span class="tag-braco">::after</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">content: ' ]';</span>
-<span class="tag-braco">}</span></code></pre>
+<span class="tag-branco">/* Adiciona um colchete depois do texto do link */</span>
+<span class="tag">a</span><span class="tag-branco">::after</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">content: ' ]';</span>
+<span class="tag-branco">}</span></code></pre>
         </div>
 
         <p>Podemos ir além e combinar pseudo-elementos com seletores de atributo. Por exemplo, para identificar de forma automática e visual todos os links externos da página que começam com "http://", adicionando o aviso "(externo)" após o texto deles:</p>
 
         <div class="tela-programa">
-<pre><code><span class="comment">/* Identifica links externos e insere um aviso ao final */</span>
-<span class="tag">a</span><span class="tag-braco">[href^=</span><span class="string">"http://"</span><span class="tag-braco">]</span><span class="tag-braco">::after</span> <span class="tag-braco">{</span>
-    <span class="tag-braco">content: ' (externo)';</span>
-<span class="tag-braco">}</span></code></pre>
+<pre><code><span class="tag-branco">/* Identifica links externos e insere um aviso ao final */</span>
+<span class="tag">a</span><span class="tag-branco">[href^=</span><span class="string">"http://"</span><span class="tag-branco">]</span><span class="tag-branco">::after</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">content: ' (externo)';</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+
+        <h2>Bordas arredondadas com border-radius</h2>
+        <p>Antes do CSS3, a única forma de criar cantos arredondados em um elemento era utilizando imagens de fundo, o que aumentava o tempo de carregamento da página e dificultava muito a manutenção do código.</p>
+        <p>Com a propriedade <code>border-radius</code>, podemos definir o raio de arredondamento dos cantos de um elemento de forma totalmente nativa e simples:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* Aplica um raio de 5px em todos os quatro cantos uniformemente */</span>
+<span class="tag">div</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">border-radius: 5px;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h3>Customizando cantos específicos</h3>
+        <p>A propriedade <code>border-radius</code> é uma propriedade abreviada (shorthand). Isso significa que podemos passar de um a quatro valores para controlar o arredondamento de cada canto individualmente, seguindo a ordem horária a partir do canto superior esquerdo:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* 1 Valor: Aplica o mesmo raio (15px) em todos os cantos */</span>
+<span class="tag">.a</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">border-radius: 15px;</span>
+<span class="tag-branco">}</span>
+
+<span class="tag-branco">/* 2 Valores: [Superior-Esquerdo e Inferior-Direito] [Superior-Direito e Inferior-Esquerdo] */</span>
+<span class="tag">.b</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">border-radius: 5px 20px;</span>
+<span class="tag-branco">}</span>
+
+<span class="tag-branco">/* 3 Valores: [Superior-Esquerdo] [Superior-Direito e Inferior-Esquerdo] [Inferior-Direito] */</span>
+<span class="tag">.c</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">border-radius: 5px 20px 50px;</span>
+<span class="tag-branco">}</span>
+
+<span class="tag-branco">/* 4 Valores: [Superior-Esquerdo] [Superior-Direito] [Inferior-Direito] [Inferior-Esquerdo] */</span>
+<span class="tag">.d</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">border-radius: 5px 20px 50px 100px;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+
+
+        h2>Sombras em textos com text-shadow</h2>
+        <p>A propriedade <code>text-shadow</code> do CSS3 permite adicionar sombras diretamente em textos de forma nativa. Sua sintaxe básica recebe os valores de deslocamento horizontal, deslocamento vertical e a cor da sombra:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* Sombra deslocada 10px para a direita e 10px para baixo, na cor vermelha */</span>
+<span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">text-shadow: 10px 10px red;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h3>Adicionando efeito de desfoque (blur)</h3>
+        <p>Também podemos passar um terceiro valor numérico antes da cor para definir o nível de espalhamento ou desfoque (blur) da sombra, deixando o efeito mais suave:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* Deslocamento horizontal, vertical, raio de desfoque (5px) e cor */</span>
+<span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">text-shadow: 10px 10px 5px red;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h3>Múltiplas sombras</h3>
+        <p>Se quisermos criar efeitos visuais mais complexos, o CSS permite aplicar múltiplas sombras ao mesmo elemento. Para isso, basta separar cada bloco de configuração por uma vírgula:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* Aplica duas sombras com direções e desfoques diferentes ao mesmo tempo */</span>
+<span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">text-shadow: 10px 10px 5px red, -5px -5px 4px red;</span>
+<span class="tag-branco">}</span></code></pre>
         </div>
 
 
 
 
+
+        <h2>Sombras em elementos com box-shadow</h2>
+        <p>Além de aplicar sombras em textos, o CSS3 permite adicionar sombras em qualquer elemento de bloco (como divs, imagens ou parágrafos) através da propriedade <code>box-shadow</code>.</p>
+        <p>A sua sintaxe básica segue a mesma lógica do text-shadow, recebendo os valores de deslocamento horizontal, deslocamento vertical e a cor:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* Sombra deslocada 20px para a direita e 20px para baixo, na cor preta */</span>
+<span class="tag">div</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">box-shadow: 20px 20px black;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <p>Podemos adicionar um terceiro valor numérico para controlar o nível de desfoque (blur) da sombra:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* Deslocamento horizontal, vertical, raio de desfoque (20px) e cor */</span>
+<span class="tag">div</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">box-shadow: 20px 20px 20px black;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <p>Diferente do text-shadow, o <code>box-shadow</code> aceita um quarto valor numérico opcional (antes da cor) chamado <strong>spread</strong>. Ele serve para expandir ou contrair o tamanho da sombra em todas as direções:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* Deslocamento, desfoque (20px), expansão (30px) e cor */</span>
+<span class="tag">div</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">box-shadow: 20px 20px 20px 30px black;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <p>Por fim, podemos adicionar a palavra-chave <code>inset</code> no início da propriedade. Isso faz com que a sombra seja projetada para o lado de dentro do elemento, criando um efeito de profundidade interna:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* Sombra interna centralizada com 10px de desfoque */</span>
+<span class="tag">div</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">box-shadow: inset 0 0 10px black;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h2>Opacidade e cores com RGBA</h2>
+        <p>A propriedade <code>opacity</code> serve para alterar a opacidade completa de um elemento, aceitando valores decimais que variam entre 0 (totalmente transparente) e 1 (totalmente opaco):</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* Deixa todo o parágrafo (fundo e texto) com 30% de opacidade */</span>
+<span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">opacity: 0.3;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <p>O problema do <code>opacity</code> é que ele afeta todos os elementos filhos. Se você aplicar opacidade em uma caixa de texto, as letras de dentro também ficarão transparentes e difíceis de ler.</p>
+        <p>Para resolver isso e aplicar transparência <strong>apenas na cor de fundo</strong> (mantendo o texto totalmente visível e nítido), o CSS3 introduziu a função <code>rgba()</code>. Além dos três canais normais de cores (Red, Green, Blue de 0 a 255), ela recebe um quarto argumento: o canal Alpha (de 0 a 1):</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* Formas equivalentes de declarar a cor branca */</span>
+<span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">color: white;</span>
+    <span class="tag-branco">color: #FFFFFF;</span>
+    <span class="tag-branco">color: rgb(255, 255, 255);</span>
+<span class="tag-branco">}</span>
+
+<span class="tag-branco">/* Aplicando o canal Alpha: branco com 80% de opacidade */</span>
+<span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">color: rgba(255, 255, 255, 0.8);</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <p>Com essa técnica, conseguimos criar um fundo preto translúcido atrás de um texto sem deixar o texto em si transparente:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* Fundo preto com 30% de opacidade, mas texto 100% branco e nítido */</span>
+<span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">background-color: rgba(0, 0, 0, 0.3);</span>
+    <span class="tag-branco">color: white;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+
+        <h2>Prefixos dos fabricantes</h2>
+        <p>Muitos recursos do HTML5 e do CSS3 passam por um longo período experimental antes de se tornarem normas oficiais. Para permitir que os desenvolvedores testem essas novidades com antecedência, os navegadores costumam implementá-las de forma provisória adicionando um prefixo específico antes do nome da propriedade.</p>
+        <p>Os prefixos dos fabricantes mais conhecidos são:</p>
+        <ul>
+            <li><code>-webkit-</code>: Navegadores baseados em WebKit (Chrome, Safari, iOS, Android)</li>
+            <li><code>-moz-</code>: Firefox (Mozilla)</li>
+            <li><code>-ms-</code>: Internet Explorer / Edge antigo (Microsoft)</li>
+            <li><code>-o-</code>: Opera</li>
+        </ul>
+
+        <p>Atualmente, propriedades consagradas como <code>border-radius</code> e <code>box-shadow</code> são interpretadas nativamente por qualquer navegador moderno sem necessidade de prefixos. No entanto, se o objetivo do projeto for garantir a compatibilidade com sistemas legados ou versões muito antigas, a boa prática exige empilhar as regras deixando a oficial por último:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* Chrome antigo (até v3) e Safari antigo (até v4) */</span>
+<span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">-webkit-border-radius: 5px;</span>
+<span class="tag-branco">}</span>
+
+<span class="tag-branco">/* Firefox antigo (até v3.6) */</span>
+<span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">-moz-border-radius: 5px;</span>
+<span class="tag-branco">}</span>
+
+<span class="tag-branco">/* Sintaxe oficial e padrão para todos os navegadores modernos */</span>
+<span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">border-radius: 5px;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h2>Gradientes com CSS3</h2>
+        <p>Os gradientes do CSS3 permitem criar transições suaves entre duas ou mais cores diretamente pelo código, eliminando a dependência de imagens de fundo pesadas. Isso deixa as páginas mais leves e garante que o efeito visual se adapte perfeitamente a qualquer resolução de tela.</p>
+        <p>A especificação oficial divide os gradientes em duas categorias principais: lineares (em linha reta) e radiais (a partir de um ponto central):</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* Gradiente linear padrão (de cima para baixo) */</span>
+<span class="tag">.linear</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">background: linear-gradient(white, blue);</span>
+<span class="tag-branco">}</span>
+
+<span class="tag-branco">/* Gradiente radial (do centro para as bordas) */</span>
+<span class="tag">.radial</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">background: radial-gradient(white, blue);</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h3>Direções, angulações e múltiplas paradas</h3>
+        <p>Podemos customizar a trajetória do gradiente indicando uma direção explícita (como <code>to right</code> ou <code>to bottom</code>) ou utilizando graus de inclinação (como <code>45deg</code>). Também é possível definir múltiplos pontos de parada inserindo porcentagens para determinar onde cada cor deve atingir sua força total:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag-branco">/* Gradiente linear direcionado com início no topo (top) indo para a base (bottom) */</span>
+<span class="tag">.linear-direcionado</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">background: linear-gradient(to bottom, white, blue);</span>
+<span class="tag-branco">}</span>
+
+<span class="tag-branco">/* Gradiente complexo inclinado a 45 graus com três paradas distintas de cor */</span>
+<span class="tag">.gradiente-avancado</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">background: linear-gradient(45deg, #F0F9FF 0%, #CBEBFF 47%, #A1DBFF 100%);</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h3>A evolução da sintaxe e retrocompatibilidade</h3>
+        <p>Embora a sintaxe atual seja universal entre os navegadores de hoje, o rascunho dos gradientes mudou drasticamente ao longo do tempo. Versões antigas interpretavam os parâmetros de direção de forma invertida ou exigiam estruturas de funções bem mais complexas.</p>
+        <p>Se um projeto demandar suporte total para navegadores do passado (como o Chrome até a versão 9 ou o Safari até a versão 5), o bloco de código precisará incluir as variações prefixadas e as estruturas legadas equivalentes:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">.linear</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">/* Sintaxe WebKit obsoleta e altamente complexa (Chrome v9- / Safari v5-) */</span>
+    <span class="tag-branco">background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, blue));</span>
+
+    <span class="tag-branco">/* Sintaxe intermediária prefixada (Atenção: usava "top" em vez de "to bottom") */</span>
+    <span class="tag-branco">background: -webkit-linear-gradient(top, white, blue);</span>
+    <span class="tag-branco">background: -moz-linear-gradient(top, white, blue);</span>
+    <span class="tag-branco">background: -o-linear-gradient(top, white, blue);</span>
+
+    <span class="tag-branco">/* Padrão atual e definitivo */</span>
+    <span class="tag-branco">background: linear-gradient(to bottom, white, blue);</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+
+        <h3>Geração de gradientes e estratégias de fallback</h3>
+        <p>Uma prática recomendada ao trabalhar com gradientes é declarar uma cor de fundo simples e sólida imediatamente antes da regra do gradiente. Como os navegadores antigos não reconhecem a função do gradiente, eles simplesmente ignoram essa linha e renderizam a cor sólida, garantindo que o conteúdo continue legível e usável.</p>
+        <p>Por outro lado, os navegadores modernos processam a cor sólida primeiro e, em seguida, aplicam o gradiente por cima, substituindo-a. Essa estratégia de design é conhecida como <strong>melhoria progressiva</strong> (progressive enhancement):</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">.gradiente</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">/* Fallback para navegadores muito antigos que não suportam gradientes */</span>
+    <span class="tag-branco">background: #CBEBFF;</span>
+
+    <span class="tag-branco">/* Aplicado por navegadores modernos que entendem a propriedade */</span>
+    <span class="tag-branco">background: linear-gradient(45deg, #F0F9FF 0%, #CBEBFF 47%, #A1DBFF 100%);</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h3>Ferramentas úteis</h3>
+        <p>Escrever todas as variações, porcentagens e retrocompatibilidades de um gradiente complexo manualmente pode ser trabalhoso. Uma ferramenta altamente recomendada para facilitar esse processo é o <strong>Ultimate CSS Gradient Generator</strong> da ColorZilla.</p>
+        <p>Ela funciona como um editor de imagens visual direto no navegador, gerando automaticamente o código limpo com todos os prefixos necessários. A plataforma também conta com um recurso para importar uma imagem pronta, extrair suas cores e convertê-la diretamente em código CSS estruturado.</p>
+        <p>Você pode acessar a ferramenta através do endereço: <a href="http://www.colorzilla.com/gradient-editor/" target="_blank">http://www.colorzilla.com/gradient-editor/</a></p>
+
+
+
+        <h2>Progressive Enhancement</h2>
+        <p>Ao planejar a adoção de novas propriedades visuais, surge uma dúvida comum em relação aos navegadores antigos que não possuem suporte a essas tecnologias. O melhor caminho não é deixar de utilizar os recursos modernos, sacrificando a experiência da maioria dos usuários, mas sim adotar estratégias que garantam a usabilidade do site em qualquer cenário.</p>
+        
+        <h3>Progressive Enhancement vs. Graceful Degradation</h3>
+        <p>Existem duas abordagens principais para lidar com a compatibilidade entre diferentes gerações de navegadores:</p>
+        <ul>
+            <li><strong>Graceful Degradation (Degradação Graciosa):</strong> O desenvolvimento foca primariamente nos navegadores modernos. O objetivo é fazer com que o site "degrade" de forma organizada nos sistemas antigos, ocultando ou simplificando recursos indisponíveis sem quebrar a estrutura básica.</li>
+            <li><strong>Progressive Enhancement (Melhoria Progressiva):</strong> A lógica funciona em sentido inverso. Inicia-se o desenvolvimento garantindo o funcionamento e a usabilidade em qualquer ambiente básico. A partir dessa base sólida, adicionam-se camadas de melhorias visuais e interativas que serão ativadas apenas nos navegadores que as suportarem.</li>
+        </ul>
+        <p>Com o CSS3, a melhoria progressiva permite criar páginas perfeitamente navegáveis com bordas quadradas ou fundos sólidos em sistemas legados, enquanto usuários de navegadores modernos desfrutam de cantos arredondados, gradientes e transições complexas.</p>
+        <p>Para um aprofundamento sobre o tema, consulte o artigo no blog da Caelum: <a href="http://blog.caelum.com.br/css3-e-progressive-enhancement/" target="_blank">http://blog.caelum.com.br/css3-e-progressive-enhancement/</a></p>
+
+        <h2>CSS3 Transitions</h2>
+        <p>A propriedade <code>transition</code> permite animar de forma suave a mudança de valores em regras CSS, evitando alterações bruscas de estado quando um gatilho (como o posicionamento do mouse) é acionado.</p>
+        <p>Considere o exemplo básico abaixo, onde a posição de um elemento é alterada instantaneamente ao passar o mouse (<code>:hover</code>):</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">#teste</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">position: relative;</span>
+    <span class="tag-branco">top: 10px;</span>
+<span class="tag-branco">}</span>
+
+<span class="tag">#teste:hover</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">top: 30px;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <p>Para fazer com que esse deslocamento aconteça de maneira gradual e sutil, indicando a trajetória do elemento ao longo do tempo, aplica-se a transição:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">#teste:hover</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">transition: top 2s;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h3>Tipos de animação (Timing Functions)</h3>
+        <p>O CSS3 disponibiliza diferentes curvas de velocidade para controlar o ritmo do movimento ao longo da duração definida:</p>
+        <ul>
+            <li><code>linear</code>: Mantém uma velocidade constante do início ao fim.</li>
+            <li><code>ease</code>: Inicia o movimento de forma suave, acelera no meio e desacelera no final (comportamento padrão).</li>
+            <li><code>ease-in</code>: Começa em velocidade reduzida e acelera gradualmente até o final.</li>
+            <li><code>ease-out</code>: Inicia rapidamente e reduz a velocidade gradualmente no final.</li>
+            <li><code>ease-in-out</code>: Combina o início lento e o final lento, suavizando as duas extremidades.</li>
+            <li><code>cubic-bezier(x1, y1, x2, y2)</code>: Permite mapear curvas de velocidade personalizadas e complexas através de coordenadas matemáticas.</li>
+        </ul>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">#teste:hover</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">transition: top 2s ease;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <p>Para planejar e testar curvas de velocidade customizadas baseadas em Bézier, pode-se utilizar a ferramenta auxiliar disponível em: <a href="http://www.roblaplaca.com/examples/bezierBuilder/" target="_blank">http://www.roblaplaca.com/examples/bezierBuilder/</a></p>
+
+        <h3>Múltiplas propriedades e o atalho all</h3>
+        <p>É possível monitorar e animar diversas propriedades simultaneamente dentro do mesmo seletor, separando as regras por vírgulas, incluindo transições de cores:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">#teste</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">position: relative;</span>
+    <span class="tag-branco">top: 10px;</span>
+    <span class="tag-branco">color: white;</span>
+<span class="tag-branco">}</span>
+
+<span class="tag">#teste:hover</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">top: 30px;</span>
+    <span class="tag-branco">color: red;</span>
+    <span class="tag-branco">transition: top 2s, color 1s ease;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <p>Caso todas as propriedades modificadas devam compartilhar exatamente o mesmo tempo de duração e a mesma curva de velocidade, utiliza-se a palavra-chave <code>all</code> (que também atua como o valor padrão da propriedade):</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">#teste:hover</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">transition: all 2s ease;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h2>CSS3 Transforms</h2>
+        <p>A especificação de transformações permite alterar a geometria e o posicionamento visual de um elemento na tela (como rotação, escala e distorção) de forma isolada, sem causar impacto ou deslocamento na estrutura dos demais elementos ao redor.</p>
+
+        <h3>Translate</h3>
+        <p>A função <code>translate</code> modifica o posicionamento do elemento nos eixos bidimensionais. É possível isolar a movimentação na horizontal com <code>translateX</code>, na vertical com <code>translateY</code>, ou combinar ambos parâmetros na função genérica:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">header</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">/* Move o elemento 50px para a direita no eixo horizontal */</span>
+    <span class="tag-branco">transform: translateX(50px);</span>
+<span class="tag-branco">}</span>
+
+<span class="tag">#main</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">/* Move o elemento 20px para cima no eixo vertical */</span>
+    <span class="tag-branco">transform: translateY(-20px);</span>
+<span class="tag-branco">}</span>
+
+<span class="tag">footer</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">/* Move o elemento simultaneamente nos eixos X (40px) e Y (-20px) */</span>
+    <span class="tag-branco">transform: translate(40px, -20px);</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h3>Rotate</h3>
+        <p>A função <code>rotate</code> altera a inclinação angular do elemento com base em uma unidade de graus (<code>deg</code>). Valores positivos rotacionam no sentido horário, enquanto valores negativos rotacionam no sentido anti-horário:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">#menu-departamentos</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">transform: rotate(-10deg);</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h3>Scale</h3>
+        <p>A função <code>scale</code> modifica a escala de dimensionamento do elemento em relação ao seu tamanho original (onde <code>1</code> equivale a 100%). O valor <code>1.2</code>, por exemplo, amplia o elemento em 20%:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">#novidades li</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">/* Altera a escala proporcional total do elemento */</span>
+    <span class="tag-branco">transform: scale(1.2);</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h3>Skew</h3>
+        <p>A função <code>skew</code> causa uma distorção ou inclinação nos cantos do elemento com base em graus, alterando sua inclinação sem modificar a altura ou largura base:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">footer</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">/* Distorce as laterais do elemento no eixo horizontal */</span>
+    <span class="tag-branco">transform: skewX(10deg);</span>
+<span class="tag-branco">}</span>
+
+<span class="tag">#social</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">/* Distorce as linhas superiores e inferiores no eixo vertical */</span>
+    <span class="tag-branco">transform: skewY(10deg);</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <h3>Combinação de transformações</h3>
+        <p>Para aplicar múltiplos efeitos de transformação sobre o mesmo seletor, deve-se listar as funções sequencialmente, separadas por espaços simples, dentro da mesma propriedade <code>transform</code>:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">html</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">/* Rotaciona o elemento em -30 graus e reduz sua escala para 40% do tamanho */</span>
+    <span class="tag-branco">transform: rotate(-30deg) scale(0.4);</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+
+        <h2>Especificidade de seletores CSS</h2>
+        <p>Quando declaramos uma série de seletores CSS, é bem possível que nos deparemos com situações em que mais de um seletor esteja aplicando propriedades visuais ao mesmo elemento do HTML. Nesse caso, é necessário saber qual seletor tem precedência sobre os outros, a fim de resolver conflitos e garantir que as propriedades desejadas estejam sendo aplicadas aos elementos corretos.</p>
+        
+        <h3>Acúmulo e substituição de propriedades</h3>
+        <p>O comportamento padrão dos seletores CSS, quando não há conflitos entre propriedades, é que as regras de mais de um seletor para um mesmo elemento sejam acumuladas. Veja no exemplo a seguir:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">color: navy;</span>
+<span class="tag-branco">}</span>
+
+<span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">font-size: 16px;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <p>No caso anterior, utilizamos o mesmo seletor duas vezes no CSS. Isso faz com que as propriedades sejam acumuladas em todos os elementos selecionados. Portanto, todos os parágrafos do documento serão exibidos na cor azul-marinho (<code>navy</code>) e com a fonte no tamanho de <code>16px</code>.</p>
+        <p>Quando há conflito entre propriedades de seletores equivalentes, ou até mesmo dentro de um mesmo seletor, aplica-se a propriedade declarada por último no arquivo:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">color: navy;</span>
+    <span class="tag-branco">font-size: 12px;</span>
+<span class="tag-branco">}</span>
+
+<span class="tag">p</span> <span class="tag-branco">{</span>
+    <span class="tag-branco">font-size: 16px;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <p>Nesse cenário, há um conflito entre as propriedades <code>font-size</code>. Como os seletores possuem o mesmo peso, os parágrafos serão exibidos com o tamanho de <code>16px</code>. A declaração anterior de <code>12px</code> é sobrescrita pela nova regra declarada mais abaixo no código. A cor <code>navy</code> continua aplicada normalmente.</p>
+
+        <h3>O cálculo da especificidade</h3>
+        <p>Seletores equivalentes têm suas propriedades sobrescritas conforme a ordem de declaração. Mas o que acontece quando temos diferentes tipos de seletores apontando para o mesmo elemento?</p>
+        <p>Cada tipo de seletor tem um peso diferente quando o navegador os interpreta. Pensamos em uma regra simples: quanto mais específico for o seletor, maior será o seu valor de <strong>especificidade</strong>.</p>
+        <ul>
+            <li><strong>Seletor de tag (ex: <code>div {}</code>):</strong> É bem genérico. Aplica-se a todas as tags do documento, sem levar em consideração seus atributos. Por isso, possui valor baixo de especificidade.</li>
+            <li><strong>Seletor de classe (ex: <code>.destaque {}</code>):</strong> É mais específico, pois nós determinamos quais elementos recebem essa classe no HTML. Seu valor é maior que o seletor de tag.</li>
+            <li><strong>Seletor de ID (ex: <code>#cabecalho {}</code>):</strong> É altamente específico, já que só podemos ter um único elemento com determinado ID por página. Possui o maior valor entre os três.</li>
+        </ul>
+
+        <p>Para calcular a prioridade de seletores compostos ou combinados, podemos somar os pontos de cada tipo em suas respectivas posições decimais (representadas pelo formato fictício <code>000</code>, correspondendo a centenas para ID, dezenas para classe e unidades para tag):</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">p</span> <span class="tag-branco">{ /* Especificidade: 001 */</span>
+    <span class="tag-branco">color: blue;</span>
+<span class="tag-branco">}</span>
+
+<span class="tag">.destaque</span> <span class="tag-branco">{ /* Especificidade: 010 */</span>
+    <span class="tag-branco">color: red;</span>
+<span class="tag-branco">}</span>
+
+<span class="tag">#cabecalho</span> <span class="tag-branco">{ /* Especificidade: 100 */</span>
+    <span class="tag-branco">color: green;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <p>Nos seletores combinados, basta somar os valores de cada elemento constituinte para obter o peso final do grupo:</p>
+
+        <div class="tela-programa">
+<pre><code><span class="tag">#rodape p</span> <span class="tag-branco">{ /* Especificidade: 101 (1 ID + 1 Tag) */</span>
+    <span class="tag-branco">font-size: 11px;</span>
+<span class="tag-branco">}</span>
+
+<span class="tag">#cabecalho .conteudo h1</span> <span class="tag-branco">{ /* Especificidade: 111 (1 ID + 1 Classe + 1 Tag) */</span>
+    <span class="tag-branco">color: green;</span>
+<span class="tag-branco">}</span>
+
+<span class="tag">.conteudo div p span</span> <span class="tag-branco">{ /* Especificidade: 013 (1 Classe + 3 Tags) */</span>
+    <span class="tag-branco">font-size: 13px;</span>
+<span class="tag-branco">}</span></code></pre>
+        </div>
+
+        <p>Quanto maior o valor final da especificidade, maior será a prioridade do seletor. Dessa maneira, um seletor com peso <code>013</code> sobrescreverá com sucesso as propriedades conflitantes de um seletor com peso <code>001</code> aplicado sobre o mesmo elemento.</p>
 </body>
 </html>
